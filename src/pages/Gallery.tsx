@@ -11,6 +11,7 @@ import mask2 from "@/assets/mask-2.jpg";
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import studioHeader from "@/assets/studio-header.jpg";
+import maskenHero from "@/assets/masken-hero.jpg";
 
 type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "making-of";
 
@@ -66,9 +67,9 @@ const Gallery = () => {
         };
       case "masken":
         return {
-          title: "Masken",
-          description: "Trotz ihrer starken Reduzierung ist vielen Masken ein menschlicher Wesenszug geblieben, der die Kommunikation mit dem überraschten Betrachter sucht",
-          headerImage: mask1
+          title: "MASKEN",
+          description: "Trotz ihrer starken Reduzierung ist vielen Masken ein menschlicher Wesenszug geblieben, der die Kommunikation mit dem überraschten Betrachter sucht.",
+          headerImage: maskenHero
         };
       case "skulpturen":
         return {

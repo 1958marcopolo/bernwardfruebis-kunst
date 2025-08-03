@@ -48,23 +48,37 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
       {/* Header Section */}
       <div className="mb-12">
         {headerImage && (
-          <div className="mb-6 aspect-[16/9] max-w-4xl mx-auto">
+          <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
             <img
               src={headerImage}
               alt={`${title} header`}
-              className="w-full h-full object-cover rounded-sm"
+              className="w-full h-full object-cover object-left-center"
             />
+            {/* Overlay with headline and subheadline */}
+            <div className="absolute inset-0 bg-background/80 flex items-center">
+              <div className="max-w-md ml-8 md:ml-12">
+                <h2 className="text-4xl md:text-5xl font-medium mb-4 text-foreground tracking-wide">
+                  {title}
+                </h2>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            </div>
           </div>
         )}
         
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-foreground tracking-wide">
-            {title}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {description}
-          </p>
-        </div>
+        {/* Fallback for when no header image */}
+        {!headerImage && (
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4 text-foreground tracking-wide">
+              {title}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              {description}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Filter Navigation - only show if we have category functionality */}
