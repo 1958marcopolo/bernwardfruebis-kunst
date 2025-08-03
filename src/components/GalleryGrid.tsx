@@ -50,7 +50,7 @@ const GalleryGrid = ({
                 {/* Headline and subheadline on right half, left aligned */}
                 <div className="absolute top-16 left-[55%] w-[40%] pl-16 mr-5">
                   <h2 style={{
-                color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
+                color: title === "ZEICHNUNGEN" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
                 fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
@@ -58,8 +58,13 @@ const GalleryGrid = ({
                     {title}
                   </h2>
                   {/* Subheadline below headline - hide for Zeichnungen */}
-                  {title !== "ZEICHNUNGEN" && <p className="text-base leading-relaxed" style={{
+                  {title !== "ZEICHNUNGEN" && title !== "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
                 color: '#deddd6'
+              }}>
+                      {description}
+                    </p>}
+                  {title === "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
+                color: '#555555'
               }}>
                       {description}
                     </p>}
