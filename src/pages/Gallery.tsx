@@ -23,6 +23,7 @@ const Gallery = () => {
   // Combined artwork data with categories
   const allArtworks = [
     // Zeichnungen
+    { id: "zeichnung-00", src: getImageUrl("../assets/zeichnungen/00-Bernward.jpg"), alt: "Bernward", category: "zeichnungen" as Category },
     { id: "zeichnung-01", src: getImageUrl("../assets/zeichnungen/01-Bon Jovi (Graphit) DIN A1.jpg"), alt: "Bon Jovi (Graphit) DIN A1", category: "zeichnungen" as Category },
     { id: "zeichnung-02", src: getImageUrl("../assets/zeichnungen/02-Vulkan (Acryl) 40x40cm.jpg"), alt: "Vulkan (Acryl) 40x40cm", category: "zeichnungen" as Category },
     { id: "zeichnung-03", src: getImageUrl("../assets/zeichnungen/03-Gargouilles (Filzstift) DIN A4.jpg"), alt: "Gargouilles (Filzstift) DIN A4", category: "zeichnungen" as Category },
@@ -138,6 +139,7 @@ const Gallery = () => {
     { id: "atelier-01", src: getImageUrl("../assets/atelier/01-Ziege (Ton) h10cm.jpg"), alt: "Ziege (Ton) h10cm", category: "atelier" as Category },
     { id: "atelier-02", src: getImageUrl("../assets/atelier/02-Sonnenmann Schatten(Ton) h20cm.jpg"), alt: "Sonnenmann Schatten (Ton) h20cm", category: "atelier" as Category },
     { id: "atelier-03", src: getImageUrl("../assets/atelier/03-Ziege Gebrannt (Ton) h10cm.jpg"), alt: "Ziege Gebrannt (Ton) h10cm", category: "atelier" as Category },
+    { id: "atelier-04", src: getImageUrl("../assets/atelier/04-Lama (Ton) h15cm.jpg"), alt: "Lama (Ton) h15cm", category: "atelier" as Category },
   ];
 
   // Filter artworks based on selected category
