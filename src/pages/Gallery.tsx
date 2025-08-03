@@ -154,7 +154,7 @@ const Gallery = () => {
         return {
           title: "",
           description: "",
-          headerImage: getImageUrl("../assets/studio-header.jpg")
+          headerImage: getImageUrl("../assets/zeichnungen/00-Bernward.jpg")
         };
       case "zeichnungen":
         return {
