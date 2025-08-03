@@ -58,7 +58,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             <div className="absolute inset-0">
               {/* Headline top right */}
               <div className="absolute top-8 right-8 md:top-16 md:right-16">
-                <h2 className="text-4xl md:text-6xl font-thin tracking-wide text-right" style={{color: '#deddd6'}}>
+                <h2 className="text-4xl md:text-6xl tracking-wide text-right" style={{color: '#deddd6', fontWeight: '100'}}>
                   {title}
                 </h2>
               </div>
