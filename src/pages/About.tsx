@@ -1,5 +1,4 @@
 import Navigation from "@/components/Navigation";
-import artistPortrait from "@/assets/bernward_fruebis.png";
 
 const About = () => {
   return (
@@ -18,7 +17,7 @@ const About = () => {
             {/* Artist Photo */}
             <div className="aspect-[4/3] overflow-hidden rounded-sm">
               <img
-                src={artistPortrait}
+                src="/bernward_fruebis.png"
                 alt="Bernward Frübis, Artist"
                 className="w-full h-full object-cover"
               />
