@@ -57,10 +57,10 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             />
             {/* Text overlay without background */}
             <div className="absolute inset-0">
-              {/* Headline top right */}
-              <div className="absolute top-8 right-8 md:top-16 md:right-16">
+              {/* Headline and subheadline aligned left */}
+              <div className="absolute top-8 left-8 md:top-16 md:left-16 max-w-lg">
                 <h2 
-                  className="text-4xl md:text-6xl tracking-wide text-right font-sans"
+                  className="text-4xl md:text-6xl tracking-wide font-sans mb-4"
                   style={{
                     color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
                     fontWeight: '300',
@@ -70,15 +70,13 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                 >
                   {title}
                 </h2>
-              </div>
-              {/* Subheadline bottom left - hide for Zeichnungen */}
-              {title !== "ZEICHNUNGEN" && (
-                <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 max-w-xs">
+                {/* Subheadline below headline - hide for Zeichnungen */}
+                {title !== "ZEICHNUNGEN" && (
                   <p className="text-sm md:text-base leading-relaxed" style={{color: '#deddd6'}}>
                     {description}
                   </p>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         )}
