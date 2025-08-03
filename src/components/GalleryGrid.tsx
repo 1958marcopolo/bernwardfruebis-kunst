@@ -54,8 +54,11 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
               <img
                 src={headerImage}
                 alt={`${title} header`}
-                className="w-full h-full object-cover"
-                style={title === "MASKEN" ? {objectPosition: 'calc(50% + 100px) center'} : {objectPosition: 'center'}}
+                className={`w-full h-full object-cover ${
+                  title === "MASKEN" 
+                    ? "object-center md:object-[calc(50%+100px)_center]" 
+                    : "object-center"
+                }`}
               />
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
@@ -96,7 +99,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
               </h2>
               {/* Subheadline below headline - hide for Zeichnungen */}
               {title !== "ZEICHNUNGEN" && (
-                <p className="text-sm leading-relaxed px-4" style={{color: '#555555'}}>
+                <p className="text-sm leading-relaxed" style={{color: '#555555'}}>
                   {description}
                 </p>
               )}
