@@ -8,7 +8,11 @@ const Contact = () => {
       <main className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <header className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-medium mb-4 text-foreground tracking-wide">
+            <h1 style={{
+              fontWeight: '100',
+              fontSize: '32px',
+              letterSpacing: '0'
+            }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
               KONTAKT
             </h1>
           </header>
@@ -35,10 +39,10 @@ const Contact = () => {
                   <p>
                     <span className="text-foreground font-medium">E-Mail:</span>{" "}
                     <a 
-                      href="mailto:info@bernwardfrruebis-kunst.de"
+                      href="mailto:info@bernwardfruebis-kunst.de"
                       className="hover:text-foreground transition-colors"
                     >
-                      info@bernwardfrruebis-kunst.de
+                      info@bernwardfruebis-kunst.de
                     </a>
                   </p>
                   <p>
@@ -85,7 +89,7 @@ const Contact = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Bernward Frübis. Alle Rechte vorbehalten.
+            © 2025 Bernward Frübis. Alle Rechte vorbehalten.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             <a href="/impressum" className="hover:text-foreground transition-colors">

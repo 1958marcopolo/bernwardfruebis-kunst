@@ -44,22 +44,33 @@ const GalleryGrid = ({
         {headerImage && <>
             {/* Hero Image */}
             <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
-              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[calc(50%+100px)_center]" : "object-center"}`} />
+              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[45%_center]" : "object-center"}`} />
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
-                {/* Headline and subheadline on right half, left aligned */}
-                <div className="absolute top-16 left-[55%] w-[40%] pl-16 mr-5">
+                {/* Headline and subheadline positioning based on category */}
+                <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
+                  title === "ATELIER" ? "left-[5%]" : 
+                  title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
+                  "left-[55%]"
+                }`}>
                   <h2 style={{
-                color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
-                fontWeight: '300',
+                color: title === "ZEICHNUNGEN" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
+                fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
-              }} className="tracking-wide font-sans mb-4 text-2xl text-left">
+              }} className={`tracking-wide font-sans mb-4 text-2xl ${
+                title === "ZEICHNUNGEN" ? "text-right" : "text-left"
+              }`}>
                     {title}
                   </h2>
                   {/* Subheadline below headline - hide for Zeichnungen */}
-                  {title !== "ZEICHNUNGEN" && <p className="text-base leading-relaxed" style={{
+                  {title !== "ZEICHNUNGEN" && title !== "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
                 color: '#deddd6'
+              }}>
+                      {description}
+                    </p>}
+                  {title === "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
+                color: '#555555'
               }}>
                       {description}
                     </p>}
@@ -71,7 +82,7 @@ const GalleryGrid = ({
             <div className="md:hidden mb-8 text-left px-6">
               <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
             color: '#555555',
-            fontWeight: '300',
+            fontWeight: '100',
             letterSpacing: '0'
           }}>
                 {title}
@@ -87,7 +98,7 @@ const GalleryGrid = ({
         
         {/* Fallback for when no header image */}
         {!headerImage && <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
+            <h2 className="text-xl md:text-2xl font-thin mb-4 text-foreground tracking-wide">
               {title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -96,20 +107,8 @@ const GalleryGrid = ({
           </div>}
       </div>
 
-      {/* Special header for "alle" category */}
-      {selectedCategory === "alle" && (
-        <div className="mb-12 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
-            Chien Mechant
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      )}
-
       {/* Filter Navigation - only show if we have category functionality */}
-      {selectedCategory && onCategoryChange && <div className="mb-12 border-b border-border">
+      {selectedCategory && onCategoryChange && <div className="mb-12 border-t border-b border-border pt-6 pb-6">
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
               {[{
@@ -127,7 +126,7 @@ const GalleryGrid = ({
           }, {
             key: "atelier",
             label: "ATELIER"
-          }].map(item => <button key={item.key} onClick={() => onCategoryChange(item.key)} className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground pb-4 ${selectedCategory === item.key ? "text-foreground border-b-2 border-foreground" : "text-muted-foreground"}`}>
+          }].map(item => <button key={item.key} onClick={() => onCategoryChange(item.key)} className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${selectedCategory === item.key ? "text-foreground border-b-2 border-foreground" : "text-muted-foreground"}`}>
                   {item.label}
                 </button>)}
             </div>

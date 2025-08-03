@@ -144,9 +144,9 @@ const Gallery = () => {
     switch (category) {
       case "alle":
         return {
-          title: "",
-          description: "",
-          headerImage: getImageSrc("alleHeader")
+          title: "\"CHIEN MECHANT\"",
+          description: "84 x 60 cm",
+          headerImage: getImageSrc("zeichnung-22")
         };
       case "zeichnungen":
         return {
@@ -170,7 +170,7 @@ const Gallery = () => {
         return {
           title: "ATELIER",
           description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
-          headerImage: getImageSrc("ateliersHeader")
+          headerImage: "/Atelier-05-Sonnenmann_Schatten(Ton)_h20cm.jpg"
         };
       default:
         return {
