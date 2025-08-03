@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-				'display': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'sans': ['Open Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'display': ['Open Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
