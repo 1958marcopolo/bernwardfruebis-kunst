@@ -96,6 +96,18 @@ const GalleryGrid = ({
           </div>}
       </div>
 
+      {/* Special header for "alle" category */}
+      {selectedCategory === "alle" && (
+        <div className="mb-12 text-center max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
+            Chien Mechant
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      )}
+
       {/* Filter Navigation - only show if we have category functionality */}
       {selectedCategory && onCategoryChange && <div className="mb-12 border-b border-border">
           <div className="flex justify-center">
