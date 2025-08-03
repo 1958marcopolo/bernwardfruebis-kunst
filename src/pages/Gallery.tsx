@@ -248,7 +248,7 @@ const Gallery = () => {
         return {
           title: "ZEICHNUNGEN",
           description: "Vielfältige künstlerische Ausdrucksformen in verschiedenen Medien und Techniken",
-          headerImage: artworkGeneral1
+          headerImage: zeichnung41
         };
       case "masken":
         return {
