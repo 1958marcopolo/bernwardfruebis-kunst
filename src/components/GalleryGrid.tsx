@@ -78,7 +78,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                 { key: "masken", label: "MASKEN" },
                 { key: "skulpturen", label: "SKULPTUREN" },
                 { key: "making-of", label: "MAKING-OF" }
-              ].map((item, index) => (
+              ].map((item) => (
                 <button
                   key={item.key}
                   onClick={() => onCategoryChange(item.key)}
@@ -86,7 +86,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                     selectedCategory === item.key
                       ? "text-foreground border-b-2 border-foreground"
                       : "text-muted-foreground"
-                  } ${index > 2 ? 'basis-full sm:basis-auto' : ''}`}
+                  }`}
                 >
                   {item.label}
                 </button>
