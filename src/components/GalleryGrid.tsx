@@ -63,9 +63,9 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                   className="text-4xl md:text-6xl tracking-wide text-right font-sans"
                   style={{
                     color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
-                    fontWeight: title === "ZEICHNUNGEN" ? '300' : '100',
-                    fontSize: title === "ZEICHNUNGEN" ? '40px' : undefined,
-                    letterSpacing: title === "ZEICHNUNGEN" ? '0' : undefined
+                    fontWeight: '300',
+                    fontSize: '40px',
+                    letterSpacing: '0'
                   }}
                 >
                   {title}
