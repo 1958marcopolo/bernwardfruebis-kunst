@@ -58,7 +58,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             {/* Text overlay without background */}
             <div className="absolute inset-0">
               {/* Headline and subheadline on right half, left aligned */}
-              <div className="absolute top-8 left-[60%] md:top-16 md:left-[60%] w-[40%] pl-8 md:pl-16 mr-5">
+              <div className="absolute top-8 left-[40%] md:top-16 md:left-[40%] w-[40%] pl-8 md:pl-16 mr-5">
                 <h2 
                   className="text-4xl md:text-6xl tracking-wide font-sans mb-4"
                   style={{
