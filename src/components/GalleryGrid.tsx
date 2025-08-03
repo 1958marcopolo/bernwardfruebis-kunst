@@ -44,7 +44,7 @@ const GalleryGrid = ({
         {headerImage && <>
             {/* Hero Image */}
             <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
-              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[calc(50%+100px)_center]" : "object-center"}`} />
+              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[45%_center]" : "object-center"}`} />
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
