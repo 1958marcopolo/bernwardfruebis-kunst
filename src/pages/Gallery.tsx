@@ -145,7 +145,7 @@ const Gallery = () => {
       case "alle":
         return {
           title: "\"CHIEN MECHANT\"",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          description: "84 x 60 cm",
           headerImage: getImageSrc("zeichnung-22")
         };
       case "zeichnungen":
