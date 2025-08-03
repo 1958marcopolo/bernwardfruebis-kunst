@@ -13,6 +13,48 @@ import sculpture2 from "@/assets/sculpture-2.jpg";
 import skulpturenHero from "@/assets/skulpturen-hero.jpg";
 import studioHeader from "@/assets/studio-header.jpg";
 
+// Import zeichnungen images
+import zeichnung01 from "@/assets/zeichnungen/01-Bon Jovi (Graphit) DIN A1.jpg";
+import zeichnung02 from "@/assets/zeichnungen/02-Vulkan (Acryl) 40x40cm.jpg";
+import zeichnung03 from "@/assets/zeichnungen/03-Gargouilles (Filzstift) DIN A4.jpg";
+import zeichnung04 from "@/assets/zeichnungen/04-Gargouilles 2 (Graphit) DIN A4.jpg";
+import zeichnung05 from "@/assets/zeichnungen/05-Zeitmaschine II (Acryl- Mischtechnik) DIN A4.jpg";
+import zeichnung06 from "@/assets/zeichnungen/06-Picasso (Graphit) DIN A3.jpg";
+import zeichnung07 from "@/assets/zeichnungen/07-Struktur mit Kugel (Graphit) DIN A4.jpg";
+import zeichnung08 from "@/assets/zeichnungen/08-Kurt Cobain (Graphit) A1.jpg";
+import zeichnung09 from "@/assets/zeichnungen/09-Beaucet VII (Feder tusche) DIN A4.jpg";
+import zeichnung10 from "@/assets/zeichnungen/10-Herbst (Graphit) DIN A6.jpeg";
+import zeichnung11 from "@/assets/zeichnungen/11-Beaucet I (Graphit) DIN A4.jpg";
+import zeichnung12 from "@/assets/zeichnungen/12-Beaucet II (Graphit) DIN A4.jpg";
+import zeichnung13 from "@/assets/zeichnungen/13-Sator-Maske II ( Ton Kupfer Leder) 15x50cm.jpg";
+import zeichnung14 from "@/assets/zeichnungen/14-Bob Dylan (Oil) 150x150cm.jpg";
+import zeichnung15 from "@/assets/zeichnungen/15-alter Mann 1 (Graphit) DIN A4.jpg";
+import zeichnung16 from "@/assets/zeichnungen/16-Jonathan (4Jahre) (Graphit) DIN A4.jpg";
+import zeichnung17 from "@/assets/zeichnungen/17-Venasque (Aquarell) DIN A4.jpg";
+import zeichnung18 from "@/assets/zeichnungen/18-Jack Nickolson (Graphit) DIN A1.jpg";
+import zeichnung19 from "@/assets/zeichnungen/19-Das fliegende Ei (Akryl) DIN A4.jpg";
+import zeichnung20 from "@/assets/zeichnungen/20-Iggi Pop (Graphit) DIN A1.jpg";
+import zeichnung21 from "@/assets/zeichnungen/21-ouvre la port! (Graphit) DIN A7.jpg";
+import zeichnung22 from "@/assets/zeichnungen/22-Cien Mechant (Graphit) DIN A1.jpg";
+import zeichnung23 from "@/assets/zeichnungen/23-afri-cola (Tusche) DIN A4.jpg";
+import zeichnung24 from "@/assets/zeichnungen/24-Beaucet III (Graphit) DIN A4.jpg";
+import zeichnung25 from "@/assets/zeichnungen/25-Ueber den Daechern von Paris 1978 (Kugelschreiber)15x15cm.jpg";
+import zeichnung26 from "@/assets/zeichnungen/26-alter Mann 2 (Graphit) DIN A4.jpg";
+import zeichnung27 from "@/assets/zeichnungen/27-Das ueberraschte Rot (Acryl) DIN A4.jpg";
+import zeichnung28 from "@/assets/zeichnungen/28-Liegender Akt (Graphit) DIN A1.jpg";
+import zeichnung29 from "@/assets/zeichnungen/29-C2-C4 (Acryl 3D) DIN A4.jpg";
+import zeichnung30 from "@/assets/zeichnungen/30-Zwischen-Rot (Lithographie) DIN A3.jpg";
+import zeichnung31 from "@/assets/zeichnungen/31-Bleistift 366 (Graphit) DIN A4.jpg";
+import zeichnung32 from "@/assets/zeichnungen/32-Der Matrose (Tusche) DIN A2.jpg";
+import zeichnung33 from "@/assets/zeichnungen/33-Luzifer (Acryl) DIN A4.jpg";
+import zeichnung34 from "@/assets/zeichnungen/34-Chaise long (Pastell) DIN A3.jpg";
+import zeichnung35 from "@/assets/zeichnungen/35-Sator-Maske I (Ton Kupfer Leder) 15x40cm.jpg";
+import zeichnung36 from "@/assets/zeichnungen/36-Zeitmaschine I (Acryl-Mischtechnik) DIN A4.jpg";
+import zeichnung37 from "@/assets/zeichnungen/37-Beaucet VIII Detail (Graphit) DIN A4.jpg";
+import zeichnung38 from "@/assets/zeichnungen/38-Papi (Graphit) DIN A4.jpg";
+import zeichnung39 from "@/assets/zeichnungen/39-Beaucet VI (Graphit) DIN A4.jpg";
+import zeichnung40 from "@/assets/zeichnungen/40-Beaucet IV (Graphit) DIN A4.jpg";
+
 // Import masken images
 import masken01 from "@/assets/masken/01-BF-Masken.jpg";
 import masken02 from "@/assets/masken/02-BF-Masken.jpg";
@@ -79,13 +121,47 @@ const Gallery = () => {
 
   // Combined artwork data with categories
   const allArtworks = [
-    // Zeichnungen (General artworks)
-    { id: "general-1", src: artworkGeneral1, alt: "Mixed media artwork with geometric forms", category: "zeichnungen" as Category },
-    { id: "general-2", src: artworkGeneral2, alt: "Urban landscape charcoal drawing", category: "zeichnungen" as Category },
-    { id: "general-3", src: artworkGeneral1, alt: "Abstract composition", category: "zeichnungen" as Category },
-    { id: "general-4", src: artworkGeneral2, alt: "Architectural sketch", category: "zeichnungen" as Category },
-    { id: "general-5", src: artworkGeneral1, alt: "Contemporary drawing", category: "zeichnungen" as Category },
-    { id: "general-6", src: artworkGeneral2, alt: "Mixed media piece", category: "zeichnungen" as Category },
+    // Zeichnungen
+    { id: "zeichnung-01", src: zeichnung01, alt: "Bon Jovi (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-02", src: zeichnung02, alt: "Vulkan (Acryl) 40x40cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-03", src: zeichnung03, alt: "Gargouilles (Filzstift) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-04", src: zeichnung04, alt: "Gargouilles 2 (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-05", src: zeichnung05, alt: "Zeitmaschine II (Acryl- Mischtechnik) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-06", src: zeichnung06, alt: "Picasso (Graphit) DIN A3", category: "zeichnungen" as Category },
+    { id: "zeichnung-07", src: zeichnung07, alt: "Struktur mit Kugel (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-08", src: zeichnung08, alt: "Kurt Cobain (Graphit) A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-09", src: zeichnung09, alt: "Beaucet VII (Feder tusche) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-10", src: zeichnung10, alt: "Herbst (Graphit) DIN A6", category: "zeichnungen" as Category },
+    { id: "zeichnung-11", src: zeichnung11, alt: "Beaucet I (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-12", src: zeichnung12, alt: "Beaucet II (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-13", src: zeichnung13, alt: "Sator-Maske II (Ton Kupfer Leder) 15x50cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-14", src: zeichnung14, alt: "Bob Dylan (Oil) 150x150cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-15", src: zeichnung15, alt: "alter Mann 1 (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-16", src: zeichnung16, alt: "Jonathan (4Jahre) (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-17", src: zeichnung17, alt: "Venasque (Aquarell) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-18", src: zeichnung18, alt: "Jack Nickolson (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-19", src: zeichnung19, alt: "Das fliegende Ei (Akryl) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-20", src: zeichnung20, alt: "Iggi Pop (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-21", src: zeichnung21, alt: "ouvre la port! (Graphit) DIN A7", category: "zeichnungen" as Category },
+    { id: "zeichnung-22", src: zeichnung22, alt: "Cien Mechant (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-23", src: zeichnung23, alt: "afri-cola (Tusche) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-24", src: zeichnung24, alt: "Beaucet III (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-25", src: zeichnung25, alt: "Ueber den Daechern von Paris 1978 (Kugelschreiber) 15x15cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-26", src: zeichnung26, alt: "alter Mann 2 (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-27", src: zeichnung27, alt: "Das ueberraschte Rot (Acryl) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-28", src: zeichnung28, alt: "Liegender Akt (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-29", src: zeichnung29, alt: "C2-C4 (Acryl 3D) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-30", src: zeichnung30, alt: "Zwischen-Rot (Lithographie) DIN A3", category: "zeichnungen" as Category },
+    { id: "zeichnung-31", src: zeichnung31, alt: "Bleistift 366 (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-32", src: zeichnung32, alt: "Der Matrose (Tusche) DIN A2", category: "zeichnungen" as Category },
+    { id: "zeichnung-33", src: zeichnung33, alt: "Luzifer (Acryl) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-34", src: zeichnung34, alt: "Chaise long (Pastell) DIN A3", category: "zeichnungen" as Category },
+    { id: "zeichnung-35", src: zeichnung35, alt: "Sator-Maske I (Ton Kupfer Leder) 15x40cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-36", src: zeichnung36, alt: "Zeitmaschine I (Acryl-Mischtechnik) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-37", src: zeichnung37, alt: "Beaucet VIII Detail (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-38", src: zeichnung38, alt: "Papi (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-39", src: zeichnung39, alt: "Beaucet VI (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-40", src: zeichnung40, alt: "Beaucet IV (Graphit) DIN A4", category: "zeichnungen" as Category },
     
     // Masken
     { id: "masken-01", src: masken01, alt: "BF Masken 01", category: "masken" as Category },
