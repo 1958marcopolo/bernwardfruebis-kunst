@@ -8,18 +8,22 @@ const About = () => {
       <main className="container mx-auto px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <header className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-medium mb-4 text-foreground tracking-wide">
+            <h1 style={{
+              fontWeight: '100',
+              fontSize: '32px',
+              letterSpacing: '0'
+            }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
               ZU MEINER PERSON
             </h1>
           </header>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Artist Photo */}
-            <div className="aspect-[4/3] overflow-hidden rounded-sm">
+            <div className="w-full overflow-hidden rounded-sm">
               <img
                 src="/bernward_fruebis.png"
                 alt="Bernward Frübis, Artist"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
 
