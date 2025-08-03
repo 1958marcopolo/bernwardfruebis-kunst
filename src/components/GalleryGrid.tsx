@@ -48,37 +48,60 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
       {/* Header Section */}
       <div className="mb-12">
         {headerImage && (
-          <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
-            <img
-              src={headerImage}
-              alt={`${title} header`}
-              className="w-full h-full object-cover"
-              style={title === "MASKEN" ? {objectPosition: 'calc(50% + 100px) center'} : {objectPosition: 'center'}}
-            />
-            {/* Text overlay without background */}
-            <div className="absolute inset-0">
-              {/* Headline and subheadline on right half, left aligned */}
-              <div className="absolute top-8 left-[55%] md:top-16 md:left-[55%] w-[40%] pl-8 md:pl-16 mr-5">
-                <h2 
-                  className="text-4xl md:text-6xl tracking-wide font-sans mb-4"
-                  style={{
-                    color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
-                    fontWeight: '300',
-                    fontSize: '40px',
-                    letterSpacing: '0'
-                  }}
-                >
-                  {title}
-                </h2>
-                {/* Subheadline below headline - hide for Zeichnungen */}
-                {title !== "ZEICHNUNGEN" && (
-                  <p className="text-sm md:text-base leading-relaxed" style={{color: '#deddd6'}}>
-                    {description}
-                  </p>
-                )}
+          <>
+            {/* Hero Image */}
+            <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
+              <img
+                src={headerImage}
+                alt={`${title} header`}
+                className="w-full h-full object-cover"
+                style={title === "MASKEN" ? {objectPosition: 'calc(50% + 100px) center'} : {objectPosition: 'center'}}
+              />
+              {/* Text overlay - only visible on desktop */}
+              <div className="absolute inset-0 hidden md:block">
+                {/* Headline and subheadline on right half, left aligned */}
+                <div className="absolute top-16 left-[55%] w-[40%] pl-16 mr-5">
+                  <h2 
+                    className="text-6xl tracking-wide font-sans mb-4"
+                    style={{
+                      color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
+                      fontWeight: '300',
+                      fontSize: '40px',
+                      letterSpacing: '0'
+                    }}
+                  >
+                    {title}
+                  </h2>
+                  {/* Subheadline below headline - hide for Zeichnungen */}
+                  {title !== "ZEICHNUNGEN" && (
+                    <p className="text-base leading-relaxed" style={{color: '#deddd6'}}>
+                      {description}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+            
+            {/* Mobile headlines below hero image */}
+            <div className="md:hidden mb-8 text-center">
+              <h2 
+                className="text-3xl tracking-wide font-sans mb-4"
+                style={{
+                  color: '#555555',
+                  fontWeight: '300',
+                  letterSpacing: '0'
+                }}
+              >
+                {title}
+              </h2>
+              {/* Subheadline below headline - hide for Zeichnungen */}
+              {title !== "ZEICHNUNGEN" && (
+                <p className="text-sm leading-relaxed px-4" style={{color: '#555555'}}>
+                  {description}
+                </p>
+              )}
+            </div>
+          </>
         )}
         
         {/* Fallback for when no header image */}
