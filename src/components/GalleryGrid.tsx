@@ -52,15 +52,15 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             <img
               src={headerImage}
               alt={`${title} header`}
-              className="w-full h-full object-cover object-left-center"
+              className="w-full h-full object-cover object-center-left"
             />
-            {/* Overlay with headline and subheadline */}
-            <div className="absolute inset-0 bg-background/80 flex items-center">
-              <div className="max-w-md ml-8 md:ml-12">
-                <h2 className="text-4xl md:text-5xl font-medium mb-4 text-foreground tracking-wide">
+            {/* Overlay with headline and subheadline positioned like in the example */}
+            <div className="absolute inset-0 bg-background/70 flex items-center justify-end">
+              <div className="max-w-md mr-8 md:mr-16 text-right">
+                <h2 className="text-4xl md:text-6xl font-light mb-6 text-foreground tracking-widest">
                   {title}
                 </h2>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xs">
                   {description}
                 </p>
               </div>
