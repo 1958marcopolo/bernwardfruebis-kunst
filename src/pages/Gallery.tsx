@@ -11,8 +11,8 @@ import mask2 from "@/assets/mask-2.jpg";
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import studioHeader from "@/assets/studio-header.jpg";
-// Using uploaded image for masken hero
-import maskenHero from "@/assets/masken-hero-uploaded.jpg";
+// Using the generated masken hero image for now
+import maskenHero from "@/assets/masken-hero.jpg";
 
 type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "making-of";
 
