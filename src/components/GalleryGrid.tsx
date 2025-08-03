@@ -99,10 +99,17 @@ const GalleryGrid = ({
       {/* Special header for "alle" category */}
       {selectedCategory === "alle" && (
         <div className="mb-12 text-center max-w-4xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-thin mb-4 text-foreground tracking-wide">
-            Chien Mechant
+          <h2 style={{
+            color: '#deddd6',
+            fontWeight: '100',
+            fontSize: '32px',
+            letterSpacing: '0'
+          }} className="tracking-wide font-sans mb-4 text-2xl">
+            "Chien Mechant"
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{
+            color: '#deddd6'
+          }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
