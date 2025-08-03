@@ -52,9 +52,9 @@ const GalleryGrid = ({
                   <h2 style={{
                 color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
                 fontWeight: '300',
-                fontSize: '40px',
+                fontSize: '32px',
                 letterSpacing: '0'
-              }} className="tracking-wide font-sans mb-4 text-3xl text-left">
+              }} className="tracking-wide font-sans mb-4 text-2xl text-left">
                     {title}
                   </h2>
                   {/* Subheadline below headline - hide for Zeichnungen */}
@@ -69,7 +69,7 @@ const GalleryGrid = ({
             
             {/* Mobile headlines below hero image */}
             <div className="md:hidden mb-8 text-left px-6">
-              <h2 className="text-3xl tracking-wide font-sans mb-4" style={{
+              <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
             color: '#555555',
             fontWeight: '300',
             letterSpacing: '0'
@@ -87,7 +87,7 @@ const GalleryGrid = ({
         
         {/* Fallback for when no header image */}
         {!headerImage && <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light mb-4 text-foreground tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
               {title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
