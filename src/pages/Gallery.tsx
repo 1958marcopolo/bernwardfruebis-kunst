@@ -56,13 +56,13 @@ const Gallery = () => {
     switch (category) {
       case "alle":
         return {
-          title: "Alle Arbeiten",
+          title: "ALLE ARBEITEN",
           description: "Eine Übersicht aller künstlerischen Arbeiten von Bernward Frübis",
           headerImage: studioHeader
         };
       case "zeichnungen":
         return {
-          title: "Zeichnungen",
+          title: "ZEICHNUNGEN",
           description: "Vielfältige künstlerische Ausdrucksformen in verschiedenen Medien und Techniken",
           headerImage: artworkGeneral1
         };
@@ -74,19 +74,19 @@ const Gallery = () => {
         };
       case "skulpturen":
         return {
-          title: "Skulpturen",
-          description: "Dreidimensionale Arbeiten, die Raum und Form in einen Dialog mit dem Betrachter bringen",
+          title: "SKULPTUREN",
+          description: "Skulpturen springen hervor, treten in die dritte Dimension, erwecken ein Objekt erst richtig zum Leben. Dadurch ist der kreative Prozess ungleich komplexer, als bei jeder Zeichnung oder Malerei. Am Beginn steht ein amorphes Ausgangsmaterial wie Holz, Ton, Marmor oder sonstigen Materialien und letztlich entscheidet nur der pure Wille des Schöpfers in Verbindung mit seinen gestalterischen Fähigkeiten was am Ende daraus entsteht. - Einfach faszinierend.",
           headerImage: sculpture1
         };
       case "making-of":
         return {
-          title: "Making-Of",
+          title: "MAKING-OF",
           description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
           headerImage: studioHeader
         };
       default:
         return {
-          title: "Alle Arbeiten",
+          title: "ALLE ARBEITEN",
           description: "Eine Übersicht aller künstlerischen Arbeiten von Bernward Frübis",
           headerImage: studioHeader
         };
