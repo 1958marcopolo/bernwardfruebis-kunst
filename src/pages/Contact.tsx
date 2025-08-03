@@ -89,7 +89,7 @@ const Contact = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Bernward Frübis. Alle Rechte vorbehalten.
+            © 2025 Bernward Frübis. Alle Rechte vorbehalten.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             <a href="/impressum" className="hover:text-foreground transition-colors">
