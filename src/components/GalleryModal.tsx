@@ -99,7 +99,7 @@ const GalleryModal = ({
       </div>
 
       {/* Main image */}
-      <div className="relative max-w-screen-lg max-h-screen px-16 py-16">
+      <div className="relative max-w-[calc(100vw-8rem)] max-h-[calc(100vh-8rem)] px-4 py-4">
         <img
           src={currentArtwork.src}
           alt={currentArtwork.alt}
