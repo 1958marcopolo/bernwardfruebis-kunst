@@ -129,7 +129,8 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                 alt={artwork.alt}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 style={artwork.category === "masken" ? {
-                  height: "200%"
+                  height: "200%",
+                  margin: "-160px 0px 0 -63px"
                 } : {}}
                 loading="lazy"
               />
