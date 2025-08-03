@@ -39,10 +39,10 @@ const Contact = () => {
                   <p>
                     <span className="text-foreground font-medium">E-Mail:</span>{" "}
                     <a 
-                      href="mailto:info@bernwardfrruebis-kunst.de"
+                      href="mailto:info@bernwardfruebis-kunst.de"
                       className="hover:text-foreground transition-colors"
                     >
-                      info@bernwardfrruebis-kunst.de
+                      info@bernwardfruebis-kunst.de
                     </a>
                   </p>
                   <p>

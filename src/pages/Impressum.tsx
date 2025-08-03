@@ -32,7 +32,7 @@ const Impressum = () => {
               <h2 className="text-xl font-medium mb-4">Kontakt</h2>
               <div className="space-y-2">
                 <p>Mobil: 0173 70 86 639</p>
-                <p>E-Mail: info@bernwardfrruebis-kunst.de</p>
+                <p>E-Mail: info@bernwardfruebis-kunst.de</p>
               </div>
             </section>
 
