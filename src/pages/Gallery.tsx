@@ -152,8 +152,8 @@ const Gallery = () => {
     switch (category) {
       case "alle":
         return {
-          title: "ALLE ARBEITEN",
-          description: "Eine Übersicht aller künstlerischen Arbeiten von Bernward Frübis",
+          title: "",
+          description: "",
           headerImage: getImageUrl("../assets/studio-header.jpg")
         };
       case "zeichnungen":
