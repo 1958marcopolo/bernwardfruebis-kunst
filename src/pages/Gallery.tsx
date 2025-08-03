@@ -3,8 +3,8 @@ import Navigation from "@/components/Navigation";
 import GalleryGrid from "@/components/GalleryGrid";
 import { getImageSrc } from "@/lib/imageRegistry";
 
-// Using external URL for masken hero image
-const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
+// Using local masken hero image from public folder
+const maskenHero = "/galerie_web_01.jpg";
 
 type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "atelier";
 
