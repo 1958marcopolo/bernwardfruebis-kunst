@@ -127,7 +127,7 @@ import skulptur10 from "@/assets/skulpturen/10-Zorniges Pferd (Ton) h20cm.jpg";
 
 // Import atelier images
 import atelier01 from "@/assets/atelier/01-Ziege (Ton) h10cm.jpg";
-import atelier02 from "@/assets/atelier/02-Sonnenmann Schatten (Ton) h20cm.jpg";
+import atelier02 from "@/assets/atelier/02-Sonnenmann Schatten(Ton) h20cm.jpg";
 
 // Using external URL for masken hero image
 const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
