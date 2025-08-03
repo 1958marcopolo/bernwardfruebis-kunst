@@ -71,14 +71,14 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
       {selectedCategory && onCategoryChange && (
         <div className="mb-12 border-b border-border">
           <div className="flex justify-center">
-            <div className="flex items-center space-x-12">
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
               {[
                 { key: "alle", label: "ALLE" },
                 { key: "zeichnungen", label: "ZEICHNUNGEN" },
                 { key: "masken", label: "MASKEN" },
                 { key: "skulpturen", label: "SKULPTUREN" },
                 { key: "making-of", label: "MAKING-OF" }
-              ].map((item) => (
+              ].map((item, index) => (
                 <button
                   key={item.key}
                   onClick={() => onCategoryChange(item.key)}
@@ -86,7 +86,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                     selectedCategory === item.key
                       ? "text-foreground border-b-2 border-foreground"
                       : "text-muted-foreground"
-                  }`}
+                  } ${index > 2 ? 'basis-full sm:basis-auto' : ''}`}
                 >
                   {item.label}
                 </button>
