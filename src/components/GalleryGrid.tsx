@@ -47,14 +47,20 @@ const GalleryGrid = ({
               <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[calc(50%+100px)_center]" : "object-center"}`} />
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
-                {/* Headline and subheadline on right half, left aligned */}
-                <div className="absolute top-16 left-[55%] w-[40%] pl-16 mr-5">
+                {/* Headline and subheadline positioning based on category */}
+                <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
+                  title === "ATELIER" ? "left-[5%]" : 
+                  title === "ZEICHNUNGEN" ? "right-[5%] text-right pl-0 pr-16" : 
+                  "left-[55%]"
+                }`}>
                   <h2 style={{
                 color: title === "ZEICHNUNGEN" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
                 fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
-              }} className="tracking-wide font-sans mb-4 text-2xl text-left">
+              }} className={`tracking-wide font-sans mb-4 text-2xl ${
+                title === "ZEICHNUNGEN" ? "text-right" : "text-left"
+              }`}>
                     {title}
                   </h2>
                   {/* Subheadline below headline - hide for Zeichnungen */}
