@@ -288,7 +288,7 @@ const Gallery = () => {
         return {
           title: "ATELIER",
           description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
-          headerImage: studioHeader
+          headerImage: atelier02
         };
       default:
         return {
