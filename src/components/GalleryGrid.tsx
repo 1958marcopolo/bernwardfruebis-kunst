@@ -59,16 +59,26 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             <div className="absolute inset-0">
               {/* Headline top right */}
               <div className="absolute top-8 right-8 md:top-16 md:right-16">
-                <h2 className="text-4xl md:text-6xl tracking-wide text-right" style={{color: '#deddd6', fontWeight: '100'}}>
+                <h2 
+                  className="text-4xl md:text-6xl tracking-wide text-right font-sans"
+                  style={{
+                    color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
+                    fontWeight: '300',
+                    fontSize: '40px',
+                    letterSpacing: '0'
+                  }}
+                >
                   {title}
                 </h2>
               </div>
-              {/* Subheadline bottom left */}
-              <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 max-w-xs">
-                <p className="text-sm md:text-base leading-relaxed" style={{color: '#deddd6'}}>
-                  {description}
-                </p>
-              </div>
+              {/* Subheadline bottom left - hide for Zeichnungen */}
+              {title !== "ZEICHNUNGEN" && (
+                <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 max-w-xs">
+                  <p className="text-sm md:text-base leading-relaxed" style={{color: '#deddd6'}}>
+                    {description}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         )}

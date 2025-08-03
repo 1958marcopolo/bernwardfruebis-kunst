@@ -52,10 +52,10 @@ import zeichnung35 from "@/assets/zeichnungen/35-Sator-Maske I (Ton Kupfer Leder
 import zeichnung36 from "@/assets/zeichnungen/36-Zeitmaschine I (Acryl-Mischtechnik) DIN A4.jpg";
 import zeichnung37 from "@/assets/zeichnungen/37-Beaucet VIII Detail (Graphit) DIN A4.jpg";
 import zeichnung38 from "@/assets/zeichnungen/38-Papi (Graphit) DIN A4.jpg";
-import zeichnung39 from "@/assets/zeichnungen/39-Beaucet VI (Graphit) DIN A4.jpg";
+import zeichnung39 from "@/assets/zeichnungen/39-Methamis (Tusche) DIN A 4.jpg";
 import zeichnung40 from "@/assets/zeichnungen/40-Beaucet IV (Graphit) DIN A4.jpg";
 import zeichnung41 from "@/assets/zeichnungen/41-Venasque (Graphit) DIN A4.jpg";
-import zeichnung42 from "@/assets/zeichnungen/42-Methamis (Tusche) DIN A 4.jpg";
+import zeichnung42 from "@/assets/zeichnungen/42-Beaucet VI (Graphit) DIN A4.jpg";
 
 // Import masken images
 import masken01 from "@/assets/masken/01-BF-Masken.jpg";
@@ -162,10 +162,10 @@ const Gallery = () => {
     { id: "zeichnung-36", src: zeichnung36, alt: "Zeitmaschine I (Acryl-Mischtechnik) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-37", src: zeichnung37, alt: "Beaucet VIII Detail (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-38", src: zeichnung38, alt: "Papi (Graphit) DIN A4", category: "zeichnungen" as Category },
-    { id: "zeichnung-39", src: zeichnung39, alt: "Beaucet VI (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-39", src: zeichnung39, alt: "Methamis (Tusche) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-40", src: zeichnung40, alt: "Beaucet IV (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-41", src: zeichnung41, alt: "Venasque (Graphit) DIN A4", category: "zeichnungen" as Category },
-    { id: "zeichnung-42", src: zeichnung42, alt: "Methamis (Tusche) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-42", src: zeichnung42, alt: "Beaucet VI (Graphit) DIN A4", category: "zeichnungen" as Category },
     
     // Masken
     { id: "masken-01", src: masken01, alt: "BF Masken 01", category: "masken" as Category },
