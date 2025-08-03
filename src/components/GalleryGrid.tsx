@@ -108,7 +108,7 @@ const GalleryGrid = ({
       </div>
 
       {/* Filter Navigation - only show if we have category functionality */}
-      {selectedCategory && onCategoryChange && <div className="mb-12 border-t border-b border-border pt-12">
+      {selectedCategory && onCategoryChange && <div className="mb-12 border-t border-b border-border pt-6 pb-6">
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
               {[{
@@ -126,7 +126,7 @@ const GalleryGrid = ({
           }, {
             key: "atelier",
             label: "ATELIER"
-          }].map(item => <button key={item.key} onClick={() => onCategoryChange(item.key)} className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground pb-4 ${selectedCategory === item.key ? "text-foreground border-b-2 border-foreground" : "text-muted-foreground"}`}>
+          }].map(item => <button key={item.key} onClick={() => onCategoryChange(item.key)} className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${selectedCategory === item.key ? "text-foreground border-b-2 border-foreground" : "text-muted-foreground"}`}>
                   {item.label}
                 </button>)}
             </div>
