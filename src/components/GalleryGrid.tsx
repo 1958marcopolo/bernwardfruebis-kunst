@@ -6,6 +6,7 @@ interface Artwork {
   src: string;
   alt: string;
   title?: string;
+  category?: string;
 }
 
 interface GalleryGridProps {
