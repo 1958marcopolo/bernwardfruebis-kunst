@@ -170,7 +170,7 @@ const Gallery = () => {
         return {
           title: "ATELIER",
           description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
-          headerImage: getImageSrc("ateliersHeader")
+          headerImage: "/Atelier-05-Sonnenmann_Schatten(Ton)_h20cm.jpg"
         };
       default:
         return {
