@@ -83,7 +83,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             </div>
             
             {/* Mobile headlines below hero image */}
-            <div className="md:hidden mb-8 text-center">
+            <div className="md:hidden mb-8 text-left px-6">
               <h2 
                 className="text-3xl tracking-wide font-sans mb-4"
                 style={{
