@@ -51,6 +51,7 @@ const GalleryGrid = ({
                 <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
                   title === "ATELIER" ? "left-[5%]" : 
                   title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
+                  title === "SKULPTUREN" ? "right-0 text-right pl-0 pr-16" :
                   "left-[55%]"
                 }`}>
                   <h2 style={{
@@ -59,7 +60,7 @@ const GalleryGrid = ({
                 fontSize: '32px',
                 letterSpacing: '0'
               }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                title === "ZEICHNUNGEN" ? "text-right" : "text-left"
+                title === "ZEICHNUNGEN" || title === "SKULPTUREN" ? "text-right" : "text-left"
               }`}>
                     {title}
                   </h2>
