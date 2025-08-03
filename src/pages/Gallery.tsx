@@ -45,7 +45,7 @@ const Gallery = () => {
     { id: "zeichnung-19", src: getImageUrl("../assets/zeichnungen/19-Das fliegende Ei (Akryl) DIN A4.jpg"), alt: "Das fliegende Ei (Akryl) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-20", src: getImageUrl("../assets/zeichnungen/20-Iggi Pop (Graphit) DIN A1.jpg"), alt: "Iggi Pop (Graphit) DIN A1", category: "zeichnungen" as Category },
     { id: "zeichnung-21", src: getImageUrl("../assets/zeichnungen/21-ouvre la port! (Graphit) DIN A7.jpg"), alt: "ouvre la port! (Graphit) DIN A7", category: "zeichnungen" as Category },
-    { id: "zeichnung-22", src: getImageUrl("../assets/zeichnungen/22-Cien Mechant (Graphit) DIN A1.jpg"), alt: "Cien Mechant (Graphit) DIN A1", category: "zeichnungen" as Category },
+    { id: "zeichnung-22", src: getImageUrl("../assets/zeichnungen/22-Chien Mechant (Graphit) DIN A1.jpg"), alt: "Chien Mechant (Graphit) DIN A1", category: "zeichnungen" as Category },
     { id: "zeichnung-23", src: getImageUrl("../assets/zeichnungen/23-afri-cola (Tusche) DIN A4.jpg"), alt: "afri-cola (Tusche) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-24", src: getImageUrl("../assets/zeichnungen/24-Beaucet III (Graphit) DIN A4.jpg"), alt: "Beaucet III (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-25", src: getImageUrl("../assets/zeichnungen/25-Ueber den Daechern von Paris 1978 (Kugelschreiber)15x15cm.jpg"), alt: "Ueber den Daechern von Paris 1978 (Kugelschreiber) 15x15cm", category: "zeichnungen" as Category },
@@ -154,7 +154,7 @@ const Gallery = () => {
         return {
           title: "",
           description: "",
-          headerImage: getImageUrl("../assets/zeichnungen/00-Bernward.jpg")
+          headerImage: getImageUrl("../assets/zeichnungen/22-Chien Mechant (Graphit) DIN A1.jpg")
         };
       case "zeichnungen":
         return {
