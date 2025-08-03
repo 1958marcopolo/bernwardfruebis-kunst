@@ -52,7 +52,8 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
             <img
               src={headerImage}
               alt={`${title} header`}
-              className="w-full h-full object-cover object-center-left"
+              className="w-full h-full object-cover"
+              style={{objectPosition: 'calc(50% + 100px) center'}}
             />
             {/* Text overlay without background */}
             <div className="absolute inset-0">
