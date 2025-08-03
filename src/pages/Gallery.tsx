@@ -98,38 +98,14 @@ const Gallery = () => {
       <Navigation />
       
       <main className="container mx-auto px-6 py-12">
-        {/* Filter Toggle Group */}
-        <div className="mb-12 flex justify-center">
-          <ToggleGroup 
-            type="single" 
-            value={selectedCategory} 
-            onValueChange={(value) => value && setSelectedCategory(value as Category)}
-            className="border border-border rounded-lg p-1 bg-muted/30"
-          >
-            <ToggleGroupItem value="alle" className="px-4 py-2 text-sm font-medium">
-              Alle
-            </ToggleGroupItem>
-            <ToggleGroupItem value="zeichnungen" className="px-4 py-2 text-sm font-medium">
-              Zeichnungen
-            </ToggleGroupItem>
-            <ToggleGroupItem value="masken" className="px-4 py-2 text-sm font-medium">
-              Masken
-            </ToggleGroupItem>
-            <ToggleGroupItem value="skulpturen" className="px-4 py-2 text-sm font-medium">
-              Skulpturen
-            </ToggleGroupItem>
-            <ToggleGroupItem value="making-of" className="px-4 py-2 text-sm font-medium">
-              Making-Of
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </div>
-
-        {/* Gallery Grid */}
+        {/* Gallery Grid with integrated filter navigation */}
         <GalleryGrid
           artworks={filteredArtworks}
           title={currentCategoryInfo.title}
           description={currentCategoryInfo.description}
           headerImage={currentCategoryInfo.headerImage}
+          selectedCategory={selectedCategory}
+          onCategoryChange={(category: string) => setSelectedCategory(category as Category)}
         />
       </main>
 

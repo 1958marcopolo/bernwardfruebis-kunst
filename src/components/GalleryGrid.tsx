@@ -14,9 +14,11 @@ interface GalleryGridProps {
   title: string;
   description: string;
   headerImage?: string;
+  selectedCategory?: string;
+  onCategoryChange?: (category: string) => void;
 }
 
-const GalleryGrid = ({ artworks, title, description, headerImage }: GalleryGridProps) => {
+const GalleryGrid = ({ artworks, title, description, headerImage, selectedCategory, onCategoryChange }: GalleryGridProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -64,6 +66,35 @@ const GalleryGrid = ({ artworks, title, description, headerImage }: GalleryGridP
           </p>
         </div>
       </div>
+
+      {/* Filter Navigation - only show if we have category functionality */}
+      {selectedCategory && onCategoryChange && (
+        <div className="mb-12 border-b border-border">
+          <div className="flex justify-center">
+            <div className="flex items-center space-x-12">
+              {[
+                { key: "alle", label: "ALLE" },
+                { key: "zeichnungen", label: "ZEICHNUNGEN" },
+                { key: "masken", label: "MASKEN" },
+                { key: "skulpturen", label: "SKULPTUREN" },
+                { key: "making-of", label: "MAKING-OF" }
+              ].map((item) => (
+                <button
+                  key={item.key}
+                  onClick={() => onCategoryChange(item.key)}
+                  className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground pb-4 ${
+                    selectedCategory === item.key
+                      ? "text-foreground border-b-2 border-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Gallery Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
