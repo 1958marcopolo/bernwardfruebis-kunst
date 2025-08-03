@@ -50,7 +50,7 @@ const GalleryGrid = ({
                 {/* Headline and subheadline positioning based on category */}
                 <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
                   title === "ATELIER" ? "left-[5%]" : 
-                  title === "ZEICHNUNGEN" ? "right-[5%] text-right pl-0 pr-16" : 
+                  title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
                   "left-[55%]"
                 }`}>
                   <h2 style={{
