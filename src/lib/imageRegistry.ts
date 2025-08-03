@@ -1,8 +1,8 @@
 // Centralized image registry using direct public URLs
-// All images are now in public folder with folder names included in filenames
+// Updated to match exact filenames in public folder
 
 export const imageRegistry = {
-  // Zeichnungen
+  // Zeichnungen - updated to match actual public filenames
   "zeichnung-01": { src: "/Zeichnung-01-Bon Jovi (Graphit) DIN A1.jpg", fallback: "/placeholder.svg" },
   "zeichnung-02": { src: "/Zeichnung-02-Vulkan (Acryl) 40x40cm.jpg", fallback: "/placeholder.svg" },
   "zeichnung-03": { src: "/Zeichnung-03-Gargouilles (Filzstift) DIN A4.jpg", fallback: "/placeholder.svg" },
@@ -102,7 +102,7 @@ export const imageRegistry = {
   "masken-53": { src: "/Masken-53-BF_Masken.jpg", fallback: "/placeholder.svg" },
   "masken-54": { src: "/Masken-54-BFK_Masken.jpg", fallback: "/placeholder.svg" },
 
-  // Skulpturen
+  // Skulpturen - updated to match actual public filenames
   "skulpturenHero": { src: "/Skulpturen-00-hero.png", fallback: "/placeholder.svg" },
   "skulptur-01": { src: "/Skulpturen-01-Cavallo (Ton) h30cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-02": { src: "/Skulpturen-02-Sonnenmann (Ton) h20cm.jpg", fallback: "/placeholder.svg" },
@@ -115,7 +115,7 @@ export const imageRegistry = {
   "skulptur-09": { src: "/Skulpturen-09-Kultischer Stier (Ton) h15cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-10": { src: "/Skulpturen-10-Zorniges Pferd (Ton) h20cm.jpg", fallback: "/placeholder.svg" },
 
-  // Atelier
+  // Atelier - updated to match actual public filenames
   "atelier-01": { src: "/Atelier-01-Ziege (Ton) h10cm.jpg", fallback: "/placeholder.svg" },
   "atelier-02": { src: "/Atelier-02-Sonnenmann Schatten(Ton) h20cm.jpg", fallback: "/placeholder.svg" },
   "atelier-03": { src: "/Atelier-03-Ziege Gebrannt (Ton) h10cm.jpg", fallback: "/placeholder.svg" },
