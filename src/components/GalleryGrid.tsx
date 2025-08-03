@@ -106,7 +106,7 @@ const GalleryGrid = ({ artworks, title, description, headerImage, selectedCatego
                 { key: "zeichnungen", label: "ZEICHNUNGEN" },
                 { key: "masken", label: "MASKEN" },
                 { key: "skulpturen", label: "SKULPTUREN" },
-                { key: "making-of", label: "MAKING-OF" }
+                { key: "atelier", label: "ATELIER" }
               ].map((item) => (
                 <button
                   key={item.key}

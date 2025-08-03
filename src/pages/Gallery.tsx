@@ -113,10 +113,24 @@ import masken52 from "@/assets/masken/52-BF_Masken.jpg";
 import masken53 from "@/assets/masken/53-BF_Masken.jpg";
 import masken54 from "@/assets/masken/54-BFK_Masken.jpg";
 
+// Import skulpturen images
+import skulptur01 from "@/assets/skulpturen/01-Cavallo (Ton) h30cm.jpg";
+import skulptur02 from "@/assets/skulpturen/02-Sonnenmann (Ton) h20cm.jpg";
+import skulptur03 from "@/assets/skulpturen/03-Lama (Ton) h15cm.jpg";
+import skulptur04 from "@/assets/skulpturen/04-Ziege (Ton) h10cm.jpg";
+import skulptur05 from "@/assets/skulpturen/05-Ulli (Ton) h15cm.jpg";
+import skulptur06 from "@/assets/skulpturen/06-Mono (Ton) h15cm.jpg";
+import skulptur07 from "@/assets/skulpturen/07-Mensch (Ton) h15cm.jpg";
+import skulptur08 from "@/assets/skulpturen/08-Stier (Ton) h15cm.jpg";
+
+// Import atelier images
+import atelier01 from "@/assets/atelier/01-Ziege (Ton) h10cm.jpg";
+import atelier02 from "@/assets/atelier/02-Sonnenmann Schatten (Ton) h20cm.jpg";
+
 // Using external URL for masken hero image
 const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
 
-type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "making-of";
+type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "atelier";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("alle");
@@ -224,10 +238,18 @@ const Gallery = () => {
     { id: "masken-54", src: masken54, alt: "BFK Masken 54", category: "masken" as Category },
     
     // Skulpturen
-    { id: "sculpture-1", src: sculpture1, alt: "Abstract sculptural form", category: "skulpturen" as Category },
-    { id: "sculpture-2", src: sculpture2, alt: "Geometric sculpture installation", category: "skulpturen" as Category },
-    { id: "sculpture-3", src: sculpture1, alt: "Contemporary three-dimensional work", category: "skulpturen" as Category },
-    { id: "sculpture-4", src: sculpture2, alt: "Modern sculptural piece", category: "skulpturen" as Category },
+    { id: "skulptur-01", src: skulptur01, alt: "Cavallo (Ton) h30cm", category: "skulpturen" as Category },
+    { id: "skulptur-02", src: skulptur02, alt: "Sonnenmann (Ton) h20cm", category: "skulpturen" as Category },
+    { id: "skulptur-03", src: skulptur03, alt: "Lama (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-04", src: skulptur04, alt: "Ziege (Ton) h10cm", category: "skulpturen" as Category },
+    { id: "skulptur-05", src: skulptur05, alt: "Ulli (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-06", src: skulptur06, alt: "Mono (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-07", src: skulptur07, alt: "Mensch (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-08", src: skulptur08, alt: "Stier (Ton) h15cm", category: "skulpturen" as Category },
+
+    // Atelier
+    { id: "atelier-01", src: atelier01, alt: "Ziege (Ton) h10cm", category: "atelier" as Category },
+    { id: "atelier-02", src: atelier02, alt: "Sonnenmann Schatten (Ton) h20cm", category: "atelier" as Category },
   ];
 
   // Filter artworks based on selected category
@@ -262,9 +284,9 @@ const Gallery = () => {
           description: "Skulpturen springen hervor, treten in die dritte Dimension, erwecken ein Objekt erst richtig zum Leben. Dadurch ist der kreative Prozess ungleich komplexer, als bei jeder Zeichnung oder Malerei. Am Beginn steht ein amorphes Ausgangsmaterial wie Holz, Ton, Marmor oder sonstigen Materialien und letztlich entscheidet nur der pure Wille des Schöpfers in Verbindung mit seinen gestalterischen Fähigkeiten was am Ende daraus entsteht. - Einfach faszinierend.",
           headerImage: skulpturenHero
         };
-      case "making-of":
+      case "atelier":
         return {
-          title: "MAKING-OF",
+          title: "ATELIER",
           description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
           headerImage: studioHeader
         };
