@@ -13,8 +13,9 @@ const Navigation = () => {
     <nav className="w-full border-b border-border bg-background">
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-medium text-foreground tracking-wider">
-            BERNWARD FRÜBIS <span className="font-normal text-muted-foreground">KUNST</span>
+          <Link to="/" className="text-xl font-medium tracking-wider">
+            <span style={{ color: '#555' }}>BERNWARD FRÜBIS</span>{' '}
+            <span className="font-normal" style={{ color: '#fff' }}>KUNST</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-12">

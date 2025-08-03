@@ -8,52 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Artist portfolio color palette - warm neutrals */
-    --background: 33 18% 96%; /* warm cream #f5f3f0 */
-    --foreground: 210 11% 20%; /* dark charcoal #333 */
+    /* Artist portfolio color palette - custom brand colors */
+    --background: 54 12% 86%; /* #deddd6 warm beige */
+    --foreground: 0 0% 33%; /* #555 dark gray for main text */
 
-    --card: 33 18% 98%;
-    --card-foreground: 210 11% 20%;
+    --card: 54 12% 88%;
+    --card-foreground: 0 0% 33%;
 
-    --popover: 33 18% 98%;
-    --popover-foreground: 210 11% 20%;
+    --popover: 54 12% 88%;
+    --popover-foreground: 0 0% 33%;
 
-    --primary: 210 11% 20%; /* dark charcoal for text */
-    --primary-foreground: 33 18% 96%;
+    --primary: 0 0% 33%; /* #555 dark gray */
+    --primary-foreground: 0 0% 100%; /* #fff white */
 
-    --secondary: 30 8% 92%; /* subtle gray */
-    --secondary-foreground: 210 11% 20%;
+    --secondary: 54 12% 82%; /* slightly darker beige */
+    --secondary-foreground: 0 0% 33%;
 
-    --muted: 30 8% 88%; /* muted gray for borders */
-    --muted-foreground: 210 8% 45%; /* medium gray text */
+    --muted: 54 12% 80%; /* muted beige for borders */
+    --muted-foreground: 0 0% 45%; /* medium gray text */
 
-    --accent: 30 8% 90%;
-    --accent-foreground: 210 11% 20%;
+    --accent: 54 12% 84%;
+    --accent-foreground: 0 0% 33%;
 
     --destructive: 0 65% 55%;
-    --destructive-foreground: 33 18% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 8% 88%;
-    --input: 30 8% 92%;
-    --ring: 210 11% 20%;
+    --border: 54 12% 78%;
+    --input: 54 12% 82%;
+    --ring: 0 0% 33%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Brand specific colors */
+    --brand-name: 0 0% 33%; /* #555 for "Bernward Frübis" */
+    --brand-kunst: 0 0% 100%; /* #fff for "Kunst" */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 54 12% 88%;
+    --sidebar-foreground: 0 0% 33%;
+    --sidebar-primary: 0 0% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 54 12% 84%;
+    --sidebar-accent-foreground: 0 0% 33%;
+    --sidebar-border: 54 12% 78%;
+    --sidebar-ring: 0 0% 33%;
   }
 
   .dark {
