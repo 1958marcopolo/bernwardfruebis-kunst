@@ -8,7 +8,11 @@ const Contact = () => {
       <main className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <header className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-medium mb-4 text-foreground tracking-wide">
+            <h1 style={{
+              fontWeight: '100',
+              fontSize: '32px',
+              letterSpacing: '0'
+            }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
               KONTAKT
             </h1>
           </header>

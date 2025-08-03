@@ -108,7 +108,7 @@ const GalleryGrid = ({
       </div>
 
       {/* Filter Navigation - only show if we have category functionality */}
-      {selectedCategory && onCategoryChange && <div className="mb-12 border-b border-border">
+      {selectedCategory && onCategoryChange && <div className="mb-12 border-t border-b border-border pt-12">
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
               {[{

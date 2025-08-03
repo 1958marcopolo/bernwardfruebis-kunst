@@ -28,13 +28,13 @@ const About = () => {
             </div>
 
             {/* Biography Text */}
-            <div className="space-y-6 text-foreground">
-              <p className="text-lg leading-relaxed">
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Geboren wurde ich 1958 in Meckenheim in der Pfalz, meine 
                 Schulzeit verbrachte ich in St. Blasien im Schwarzwald.
               </p>
               
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Aus heutiger Sicht würde ich sagen, dass ich eher ein lausiger 
                 Schüler war, gerade in klassischen Fächern, wie Latein oder 
                 Mathe. Doch schon damals entdeckte Carlo Pickert, ein ziemlich 
@@ -42,7 +42,7 @@ const About = () => {
                 für Farben und Formen.
               </p>
               
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Später studierte ich an der FH Mainz Visuelle Kommunikation 
                 bei Prof. Hans F. Krebs und Prof. Gedo Dötterweich. Zu meiner 
                 Ausbildung gehörten traditionelle Drucktechniken, wie 
@@ -50,12 +50,12 @@ const About = () => {
                 figurliches Zeichnen.
               </p>
               
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 In dieser Zeit experimentierte ich auch mit allerlei Spielarten 
                 von Monotypie.
               </p>
               
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Später habe ich meine Vorliebe zum Zeichnen entdeckt und spüre 
                 noch heute jedes mal den Aufbruch, der einem weißen Blatt Papier 
                 inne wohnt.
