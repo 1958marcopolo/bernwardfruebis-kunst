@@ -54,6 +54,8 @@ import zeichnung37 from "@/assets/zeichnungen/37-Beaucet VIII Detail (Graphit) D
 import zeichnung38 from "@/assets/zeichnungen/38-Papi (Graphit) DIN A4.jpg";
 import zeichnung39 from "@/assets/zeichnungen/39-Beaucet VI (Graphit) DIN A4.jpg";
 import zeichnung40 from "@/assets/zeichnungen/40-Beaucet IV (Graphit) DIN A4.jpg";
+import zeichnung41 from "@/assets/zeichnungen/41-Venasque (Graphit) DIN A4.jpg";
+import zeichnung42 from "@/assets/zeichnungen/42-Methamis (Tusche) DIN A 4.jpg";
 
 // Import masken images
 import masken01 from "@/assets/masken/01-BF-Masken.jpg";
@@ -162,6 +164,8 @@ const Gallery = () => {
     { id: "zeichnung-38", src: zeichnung38, alt: "Papi (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-39", src: zeichnung39, alt: "Beaucet VI (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-40", src: zeichnung40, alt: "Beaucet IV (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-41", src: zeichnung41, alt: "Venasque (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-42", src: zeichnung42, alt: "Methamis (Tusche) DIN A4", category: "zeichnungen" as Category },
     
     // Masken
     { id: "masken-01", src: masken01, alt: "BF Masken 01", category: "masken" as Category },
