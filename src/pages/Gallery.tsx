@@ -128,6 +128,7 @@ import skulptur10 from "@/assets/skulpturen/10-Zorniges Pferd (Ton) h20cm.jpg";
 // Import atelier images
 import atelier01 from "@/assets/atelier/01-Ziege (Ton) h10cm.jpg";
 import atelier02 from "@/assets/atelier/02-Sonnenmann Schatten(Ton) h20cm.jpg";
+import atelier03 from "@/assets/atelier/03-Ziege Gebrannt (Ton) h10cm.jpg";
 
 // Using external URL for masken hero image
 const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
@@ -254,6 +255,7 @@ const Gallery = () => {
     // Atelier
     { id: "atelier-01", src: atelier01, alt: "Ziege (Ton) h10cm", category: "atelier" as Category },
     { id: "atelier-02", src: atelier02, alt: "Sonnenmann Schatten (Ton) h20cm", category: "atelier" as Category },
+    { id: "atelier-03", src: atelier03, alt: "Ziege Gebrannt (Ton) h10cm", category: "atelier" as Category },
   ];
 
   // Filter artworks based on selected category
