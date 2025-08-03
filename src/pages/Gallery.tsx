@@ -10,6 +10,7 @@ import mask1 from "@/assets/mask-1.jpg";
 import mask2 from "@/assets/mask-2.jpg";
 import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
+import skulpturenHero from "@/assets/skulpturen-hero.jpg";
 import studioHeader from "@/assets/studio-header.jpg";
 // Using external URL for masken hero image
 const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
@@ -76,7 +77,7 @@ const Gallery = () => {
         return {
           title: "SKULPTUREN",
           description: "Skulpturen springen hervor, treten in die dritte Dimension, erwecken ein Objekt erst richtig zum Leben. Dadurch ist der kreative Prozess ungleich komplexer, als bei jeder Zeichnung oder Malerei. Am Beginn steht ein amorphes Ausgangsmaterial wie Holz, Ton, Marmor oder sonstigen Materialien und letztlich entscheidet nur der pure Wille des Schöpfers in Verbindung mit seinen gestalterischen Fähigkeiten was am Ende daraus entsteht. - Einfach faszinierend.",
-          headerImage: sculpture1
+          headerImage: skulpturenHero
         };
       case "making-of":
         return {
