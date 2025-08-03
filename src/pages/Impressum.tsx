@@ -23,16 +23,16 @@ const Impressum = () => {
               <div className="space-y-2">
                 <p>Bernward Frübis</p>
                 <p>Künstler</p>
-                <p>[Adresse]</p>
-                <p>[PLZ Ort]</p>
+                <p>Rheinvillenstr. 10</p>
+                <p>68163 Mannheim</p>
               </div>
             </section>
 
             <section>
               <h2 className="text-xl font-medium mb-4">Kontakt</h2>
               <div className="space-y-2">
-                <p>Telefon: [Telefonnummer]</p>
-                <p>E-Mail: [E-Mail-Adresse]</p>
+                <p>Mobil: 0173 70 86 639</p>
+                <p>E-Mail: info@bernwardfrruebis-kunst.de</p>
               </div>
             </section>
 
@@ -40,8 +40,8 @@ const Impressum = () => {
               <h2 className="text-xl font-medium mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
               <div className="space-y-2">
                 <p>Bernward Frübis</p>
-                <p>[Adresse]</p>
-                <p>[PLZ Ort]</p>
+                <p>Rheinvillenstr. 10</p>
+                <p>68163 Mannheim</p>
               </div>
             </section>
 
