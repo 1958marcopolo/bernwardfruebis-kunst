@@ -75,10 +75,12 @@ const Contact = () => {
                   Verfügbare Services
                 </h3>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• Galerienausstellungen</li>
-                  <li>• Private Kunstakquisition</li>
-                  <li>• Auftragsarbeiten</li>
+                  <li>• Töpferkurse</li>
+                  <li>• Zeichen- und Malkurse</li>
+                  <li>• Mappenberatung</li>
                   <li>• Kunstberatung</li>
+                  <li>• Auftragsarbeiten</li>
+                  <li>• Galerienausstellungen</li>
                 </ul>
               </div>
             </div>
