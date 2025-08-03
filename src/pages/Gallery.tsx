@@ -119,9 +119,11 @@ import skulptur02 from "@/assets/skulpturen/02-Sonnenmann (Ton) h20cm.jpg";
 import skulptur03 from "@/assets/skulpturen/03-Lama (Ton) h15cm.jpg";
 import skulptur04 from "@/assets/skulpturen/04-Ziege (Ton) h10cm.jpg";
 import skulptur05 from "@/assets/skulpturen/05-Ulli (Ton) h15cm.jpg";
-import skulptur06 from "@/assets/skulpturen/06-Mono (Ton) h15cm.jpg";
-import skulptur07 from "@/assets/skulpturen/07-Mensch (Ton) h15cm.jpg";
+import skulptur06 from "@/assets/skulpturen/06-Goettin (Ton) h15cm.jpg";
+import skulptur07 from "@/assets/skulpturen/07-Erschrockene Frau (Ton) h15cm.jpg";
 import skulptur08 from "@/assets/skulpturen/08-Stier (Ton) h15cm.jpg";
+import skulptur09 from "@/assets/skulpturen/09-Kultischer Stier (Ton) h15cm.jpg";
+import skulptur10 from "@/assets/skulpturen/10-Zorniges Pferd (Ton) h20cm.jpg";
 
 // Import atelier images
 import atelier01 from "@/assets/atelier/01-Ziege (Ton) h10cm.jpg";
@@ -243,9 +245,11 @@ const Gallery = () => {
     { id: "skulptur-03", src: skulptur03, alt: "Lama (Ton) h15cm", category: "skulpturen" as Category },
     { id: "skulptur-04", src: skulptur04, alt: "Ziege (Ton) h10cm", category: "skulpturen" as Category },
     { id: "skulptur-05", src: skulptur05, alt: "Ulli (Ton) h15cm", category: "skulpturen" as Category },
-    { id: "skulptur-06", src: skulptur06, alt: "Mono (Ton) h15cm", category: "skulpturen" as Category },
-    { id: "skulptur-07", src: skulptur07, alt: "Mensch (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-06", src: skulptur06, alt: "Goettin (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-07", src: skulptur07, alt: "Erschrockene Frau (Ton) h15cm", category: "skulpturen" as Category },
     { id: "skulptur-08", src: skulptur08, alt: "Stier (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-09", src: skulptur09, alt: "Kultischer Stier (Ton) h15cm", category: "skulpturen" as Category },
+    { id: "skulptur-10", src: skulptur10, alt: "Zorniges Pferd (Ton) h20cm", category: "skulpturen" as Category },
 
     // Atelier
     { id: "atelier-01", src: atelier01, alt: "Ziege (Ton) h10cm", category: "atelier" as Category },
