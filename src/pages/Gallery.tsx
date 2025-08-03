@@ -124,6 +124,7 @@ const Gallery = () => {
     { id: "masken-54", src: getImageUrl("../assets/masken/54-BFK_Masken.jpg"), alt: "BFK Masken 54", category: "masken" as Category },
     
     // Skulpturen
+    // Note: 00-hero.png is used as hero image but excluded from gallery display
     { id: "skulptur-01", src: getImageUrl("../assets/skulpturen/01-Cavallo (Ton) h30cm.jpg"), alt: "Cavallo (Ton) h30cm", category: "skulpturen" as Category },
     { id: "skulptur-02", src: getImageUrl("../assets/skulpturen/02-Sonnenmann (Ton) h20cm.jpg"), alt: "Sonnenmann (Ton) h20cm", category: "skulpturen" as Category },
     { id: "skulptur-03", src: getImageUrl("../assets/skulpturen/03-Lama (Ton) h15cm.jpg"), alt: "Lama (Ton) h15cm", category: "skulpturen" as Category },
@@ -172,7 +173,7 @@ const Gallery = () => {
         return {
           title: "SKULPTUREN",
           description: "Skulpturen springen hervor, treten in die dritte Dimension, erwecken ein Objekt erst richtig zum Leben. Dadurch ist der kreative Prozess ungleich komplexer, als bei jeder Zeichnung oder Malerei. Am Beginn steht ein amorphes Ausgangsmaterial wie Holz, Ton, Marmor oder sonstigen Materialien und letztlich entscheidet nur der pure Wille des Schöpfers in Verbindung mit seinen gestalterischen Fähigkeiten was am Ende daraus entsteht. - Einfach faszinierend.",
-          headerImage: getImageUrl("../assets/skulpturen-hero.jpg")
+          headerImage: getImageUrl("../assets/skulpturen/00-hero.png")
         };
       case "atelier":
         return {
