@@ -12,6 +12,63 @@ import sculpture1 from "@/assets/sculpture-1.jpg";
 import sculpture2 from "@/assets/sculpture-2.jpg";
 import skulpturenHero from "@/assets/skulpturen-hero.jpg";
 import studioHeader from "@/assets/studio-header.jpg";
+
+// Import masken images
+import masken01 from "@/assets/masken/01-BF-Masken.jpg";
+import masken02 from "@/assets/masken/02-BF-Masken.jpg";
+import masken03 from "@/assets/masken/03-BF-Masken.jpg";
+import masken04 from "@/assets/masken/04-BF-Masken.jpg";
+import masken05 from "@/assets/masken/05-BF-Masken.jpg";
+import masken06 from "@/assets/masken/06-BF-Masken.jpg";
+import masken07 from "@/assets/masken/07-BF-Masken.jpg";
+import masken08 from "@/assets/masken/08-BF-Masken.jpg";
+import masken09 from "@/assets/masken/09-BF-Masken.jpg";
+import masken10 from "@/assets/masken/10-BF-Masken.jpg";
+import masken11 from "@/assets/masken/11-BF-Masken.jpg";
+import masken12 from "@/assets/masken/12-BF-Masken.jpg";
+import masken13 from "@/assets/masken/13-BF-Masken.jpg";
+import masken14 from "@/assets/masken/14-BF-Masken.jpg";
+import masken15 from "@/assets/masken/15-BF-Masken.jpg";
+import masken16 from "@/assets/masken/16-BF-Masken.jpg";
+import masken17 from "@/assets/masken/17-BF-Masken.jpg";
+import masken18 from "@/assets/masken/18-BF-Masken.jpg";
+import masken19 from "@/assets/masken/19-BF-Masken.jpg";
+import masken20 from "@/assets/masken/20-BF-Masken.jpg";
+import masken21 from "@/assets/masken/21-BF-Masken.jpg";
+import masken22 from "@/assets/masken/22-BF-Masken.jpg";
+import masken23 from "@/assets/masken/23-BF-Masken.jpg";
+import masken24 from "@/assets/masken/24-BF-Masken.jpg";
+import masken25 from "@/assets/masken/25-BF-Masken.jpg";
+import masken26 from "@/assets/masken/26-BF-Masken.jpg";
+import masken27 from "@/assets/masken/27-BF-Masken.jpg";
+import masken28 from "@/assets/masken/28-BF-Masken.jpg";
+import masken29 from "@/assets/masken/29-BF-Masken.jpg";
+import masken30 from "@/assets/masken/30-BF-Masken.jpg";
+import masken31 from "@/assets/masken/31-BF-Masken.jpg";
+import masken32 from "@/assets/masken/32-BF-Masken.jpg";
+import masken33 from "@/assets/masken/33-BF-Masken.jpg";
+import masken34 from "@/assets/masken/34-BF_Masken.jpg";
+import masken35 from "@/assets/masken/35-BF_Masken.jpg";
+import masken36 from "@/assets/masken/36-BF_Masken.jpg";
+import masken37 from "@/assets/masken/37-BF_Masken.jpg";
+import masken38 from "@/assets/masken/38-BF_Masken.jpg";
+import masken39 from "@/assets/masken/39-BF_Masken.jpg";
+import masken40 from "@/assets/masken/40-BF_Masken.jpg";
+import masken41 from "@/assets/masken/41-BF_Masken.jpg";
+import masken42 from "@/assets/masken/42-BF_Masken.jpg";
+import masken43 from "@/assets/masken/43-BF_Masken.jpg";
+import masken44 from "@/assets/masken/44-BF_Masken.jpg";
+import masken45 from "@/assets/masken/45-BF_Masken.jpg";
+import masken46 from "@/assets/masken/46-BF_Masken.jpg";
+import masken47 from "@/assets/masken/47-BF_Masken.jpg";
+import masken48 from "@/assets/masken/48-BF_Masken.jpg";
+import masken49 from "@/assets/masken/49-BF_Masken.jpg";
+import masken50 from "@/assets/masken/50-BF_Masken.jpg";
+import masken51 from "@/assets/masken/51-BF_Masken.jpg";
+import masken52 from "@/assets/masken/52-BF_Masken.jpg";
+import masken53 from "@/assets/masken/53-BF_Masken.jpg";
+import masken54 from "@/assets/masken/54-BFK_Masken.jpg";
+
 // Using external URL for masken hero image
 const maskenHero = "https://bernwardfruebis-kunst.de/images/galerie/galerie_web_01.jpg";
 
@@ -31,14 +88,60 @@ const Gallery = () => {
     { id: "general-6", src: artworkGeneral2, alt: "Mixed media piece", category: "zeichnungen" as Category },
     
     // Masken
-    { id: "mask-1", src: mask1, alt: "Expressive mask drawing in ink", category: "masken" as Category },
-    { id: "mask-2", src: mask2, alt: "Abstract face portrait", category: "masken" as Category },
-    { id: "mask-3", src: mask1, alt: "Simplified human features", category: "masken" as Category },
-    { id: "mask-4", src: mask2, alt: "Contemporary mask study", category: "masken" as Category },
-    { id: "mask-5", src: mask1, alt: "Emotional expression drawing", category: "masken" as Category },
-    { id: "mask-6", src: mask2, alt: "Minimalist face sketch", category: "masken" as Category },
-    { id: "mask-7", src: mask1, alt: "Mask-like portrait", category: "masken" as Category },
-    { id: "mask-8", src: mask2, alt: "Abstract facial features", category: "masken" as Category },
+    { id: "masken-01", src: masken01, alt: "BF Masken 01", category: "masken" as Category },
+    { id: "masken-02", src: masken02, alt: "BF Masken 02", category: "masken" as Category },
+    { id: "masken-03", src: masken03, alt: "BF Masken 03", category: "masken" as Category },
+    { id: "masken-04", src: masken04, alt: "BF Masken 04", category: "masken" as Category },
+    { id: "masken-05", src: masken05, alt: "BF Masken 05", category: "masken" as Category },
+    { id: "masken-06", src: masken06, alt: "BF Masken 06", category: "masken" as Category },
+    { id: "masken-07", src: masken07, alt: "BF Masken 07", category: "masken" as Category },
+    { id: "masken-08", src: masken08, alt: "BF Masken 08", category: "masken" as Category },
+    { id: "masken-09", src: masken09, alt: "BF Masken 09", category: "masken" as Category },
+    { id: "masken-10", src: masken10, alt: "BF Masken 10", category: "masken" as Category },
+    { id: "masken-11", src: masken11, alt: "BF Masken 11", category: "masken" as Category },
+    { id: "masken-12", src: masken12, alt: "BF Masken 12", category: "masken" as Category },
+    { id: "masken-13", src: masken13, alt: "BF Masken 13", category: "masken" as Category },
+    { id: "masken-14", src: masken14, alt: "BF Masken 14", category: "masken" as Category },
+    { id: "masken-15", src: masken15, alt: "BF Masken 15", category: "masken" as Category },
+    { id: "masken-16", src: masken16, alt: "BF Masken 16", category: "masken" as Category },
+    { id: "masken-17", src: masken17, alt: "BF Masken 17", category: "masken" as Category },
+    { id: "masken-18", src: masken18, alt: "BF Masken 18", category: "masken" as Category },
+    { id: "masken-19", src: masken19, alt: "BF Masken 19", category: "masken" as Category },
+    { id: "masken-20", src: masken20, alt: "BF Masken 20", category: "masken" as Category },
+    { id: "masken-21", src: masken21, alt: "BF Masken 21", category: "masken" as Category },
+    { id: "masken-22", src: masken22, alt: "BF Masken 22", category: "masken" as Category },
+    { id: "masken-23", src: masken23, alt: "BF Masken 23", category: "masken" as Category },
+    { id: "masken-24", src: masken24, alt: "BF Masken 24", category: "masken" as Category },
+    { id: "masken-25", src: masken25, alt: "BF Masken 25", category: "masken" as Category },
+    { id: "masken-26", src: masken26, alt: "BF Masken 26", category: "masken" as Category },
+    { id: "masken-27", src: masken27, alt: "BF Masken 27", category: "masken" as Category },
+    { id: "masken-28", src: masken28, alt: "BF Masken 28", category: "masken" as Category },
+    { id: "masken-29", src: masken29, alt: "BF Masken 29", category: "masken" as Category },
+    { id: "masken-30", src: masken30, alt: "BF Masken 30", category: "masken" as Category },
+    { id: "masken-31", src: masken31, alt: "BF Masken 31", category: "masken" as Category },
+    { id: "masken-32", src: masken32, alt: "BF Masken 32", category: "masken" as Category },
+    { id: "masken-33", src: masken33, alt: "BF Masken 33", category: "masken" as Category },
+    { id: "masken-34", src: masken34, alt: "BF Masken 34", category: "masken" as Category },
+    { id: "masken-35", src: masken35, alt: "BF Masken 35", category: "masken" as Category },
+    { id: "masken-36", src: masken36, alt: "BF Masken 36", category: "masken" as Category },
+    { id: "masken-37", src: masken37, alt: "BF Masken 37", category: "masken" as Category },
+    { id: "masken-38", src: masken38, alt: "BF Masken 38", category: "masken" as Category },
+    { id: "masken-39", src: masken39, alt: "BF Masken 39", category: "masken" as Category },
+    { id: "masken-40", src: masken40, alt: "BF Masken 40", category: "masken" as Category },
+    { id: "masken-41", src: masken41, alt: "BF Masken 41", category: "masken" as Category },
+    { id: "masken-42", src: masken42, alt: "BF Masken 42", category: "masken" as Category },
+    { id: "masken-43", src: masken43, alt: "BF Masken 43", category: "masken" as Category },
+    { id: "masken-44", src: masken44, alt: "BF Masken 44", category: "masken" as Category },
+    { id: "masken-45", src: masken45, alt: "BF Masken 45", category: "masken" as Category },
+    { id: "masken-46", src: masken46, alt: "BF Masken 46", category: "masken" as Category },
+    { id: "masken-47", src: masken47, alt: "BF Masken 47", category: "masken" as Category },
+    { id: "masken-48", src: masken48, alt: "BF Masken 48", category: "masken" as Category },
+    { id: "masken-49", src: masken49, alt: "BF Masken 49", category: "masken" as Category },
+    { id: "masken-50", src: masken50, alt: "BF Masken 50", category: "masken" as Category },
+    { id: "masken-51", src: masken51, alt: "BF Masken 51", category: "masken" as Category },
+    { id: "masken-52", src: masken52, alt: "BF Masken 52", category: "masken" as Category },
+    { id: "masken-53", src: masken53, alt: "BF Masken 53", category: "masken" as Category },
+    { id: "masken-54", src: masken54, alt: "BFK Masken 54", category: "masken" as Category },
     
     // Skulpturen
     { id: "sculpture-1", src: sculpture1, alt: "Abstract sculptural form", category: "skulpturen" as Category },
