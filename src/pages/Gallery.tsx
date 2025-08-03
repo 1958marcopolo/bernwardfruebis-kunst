@@ -23,7 +23,7 @@ const Gallery = () => {
   // Combined artwork data with categories
   const allArtworks = [
     // Zeichnungen
-    { id: "zeichnung-00", src: getImageUrl("../assets/zeichnungen/00-Bernward.jpg"), alt: "Bernward", category: "zeichnungen" as Category },
+    // Removed 00-Bernward.jpg as requested
     { id: "zeichnung-01", src: getImageUrl("../assets/zeichnungen/01-Bon Jovi (Graphit) DIN A1.jpg"), alt: "Bon Jovi (Graphit) DIN A1", category: "zeichnungen" as Category },
     { id: "zeichnung-02", src: getImageUrl("../assets/zeichnungen/02-Vulkan (Acryl) 40x40cm.jpg"), alt: "Vulkan (Acryl) 40x40cm", category: "zeichnungen" as Category },
     { id: "zeichnung-03", src: getImageUrl("../assets/zeichnungen/03-Gargouilles (Filzstift) DIN A4.jpg"), alt: "Gargouilles (Filzstift) DIN A4", category: "zeichnungen" as Category },
@@ -160,7 +160,7 @@ const Gallery = () => {
         return {
           title: "ZEICHNUNGEN",
           description: "Vielfältige künstlerische Ausdrucksformen in verschiedenen Medien und Techniken",
-          headerImage: getImageUrl("../assets/zeichnungen/41-Venasque (Graphit) DIN A4.jpg")
+          headerImage: getImageUrl("../assets/zeichnungen/31-Bleistift 366 (Graphit) DIN A4.jpg")
         };
       case "masken":
         return {
