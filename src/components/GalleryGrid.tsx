@@ -51,7 +51,7 @@ const GalleryGrid = ({
                 <div className="absolute top-16 left-[55%] w-[40%] pl-16 mr-5">
                   <h2 style={{
                 color: title === "ZEICHNUNGEN" ? '#555555' : '#deddd6',
-                fontWeight: '300',
+                fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
               }} className="tracking-wide font-sans mb-4 text-2xl text-left">
@@ -71,7 +71,7 @@ const GalleryGrid = ({
             <div className="md:hidden mb-8 text-left px-6">
               <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
             color: '#555555',
-            fontWeight: '300',
+            fontWeight: '100',
             letterSpacing: '0'
           }}>
                 {title}
@@ -87,7 +87,7 @@ const GalleryGrid = ({
         
         {/* Fallback for when no header image */}
         {!headerImage && <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
+            <h2 className="text-xl md:text-2xl font-thin mb-4 text-foreground tracking-wide">
               {title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -99,7 +99,7 @@ const GalleryGrid = ({
       {/* Special header for "alle" category */}
       {selectedCategory === "alle" && (
         <div className="mb-12 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-light mb-4 text-foreground tracking-wide">
+          <h2 className="text-xl md:text-2xl font-thin mb-4 text-foreground tracking-wide">
             Chien Mechant
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
