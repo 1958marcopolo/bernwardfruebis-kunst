@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import artistPortrait from "@/assets/artist-portrait.jpg";
+import artistPortrait from "@/assets/bernward_fruebis.png";
 
 const About = () => {
   return (
