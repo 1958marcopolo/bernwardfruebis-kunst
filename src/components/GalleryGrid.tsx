@@ -76,7 +76,8 @@ const GalleryGrid = ({
                       {description}
                     </p>}
                   {title === "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed text-right" style={{
-                color: '#555555'
+                color: '#555555',
+                whiteSpace: 'nowrap'
               }}>
                       {description}
                     </p>}
