@@ -73,7 +73,7 @@ const GalleryGrid = ({
               }}>
                       {description}
                     </p>}
-                  {title === "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed" style={{
+                  {title === "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed text-right" style={{
                 color: '#555555'
               }}>
                       {description}
