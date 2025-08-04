@@ -240,16 +240,23 @@ const englishTranslations: Translations = {
 
 // Detect user language based on browser language
 const detectUserLanguage = (): 'de' | 'en' => {
-  const browserLang = navigator.language.toLowerCase();
-  
-  if (browserLang.startsWith('de') || 
-      browserLang === 'de-de' || 
-      browserLang === 'de-at' || 
-      browserLang === 'de-ch') {
+  try {
+    if (typeof navigator === 'undefined') return 'de';
+    
+    const browserLang = navigator.language?.toLowerCase() || '';
+    
+    if (browserLang.startsWith('de') || 
+        browserLang === 'de-de' || 
+        browserLang === 'de-at' || 
+        browserLang === 'de-ch') {
+      return 'de';
+    }
+    
+    return 'en';
+  } catch (error) {
+    console.warn('Language detection failed:', error);
     return 'de';
   }
-  
-  return 'en';
 };
 
 // Create context
@@ -265,22 +272,34 @@ const TranslationContext = createContext<TranslationContextType | undefined>(und
 // Provider component
 export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<'de' | 'en'>(() => {
-    if (typeof window !== 'undefined') {
-      const savedLang = localStorage.getItem('language') as 'de' | 'en' | null;
-      return savedLang || detectUserLanguage();
+    try {
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        const savedLang = localStorage.getItem('language') as 'de' | 'en' | null;
+        return savedLang || detectUserLanguage();
+      }
+    } catch (error) {
+      console.warn('localStorage access failed:', error);
     }
     return 'de';
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', language);
+    console.log('Translation effect running, language:', language);
+    try {
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        localStorage.setItem('language', language);
+        console.log('Language saved to localStorage:', language);
+      }
+    } catch (error) {
+      console.warn('localStorage save failed:', error);
     }
   }, [language]);
 
   const translations = language === 'de' ? germanTranslations : englishTranslations;
+  console.log('TranslationProvider rendering, language:', language);
 
   const toggleLanguage = () => {
+    console.log('Language toggle requested');
     setLanguage(prev => prev === 'de' ? 'en' : 'de');
   };
 
