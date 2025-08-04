@@ -78,22 +78,24 @@ const GalleryGrid = ({
               </div>
             </div>
             
-            {/* Mobile headlines below hero image */}
-            <div className="md:hidden mb-8 text-left px-6">
-              <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
-            color: '#555555',
-            fontWeight: '100',
-            letterSpacing: '0'
-          }}>
-                {title}
-              </h2>
-              {/* Subheadline below headline - hide for Zeichnungen */}
-              {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
-            color: '#555555'
-          }}>
-                  {description}
-                </p>}
-            </div>
+            {/* Mobile headlines below hero image - hide for "alle" category */}
+            {selectedCategory !== "alle" && (
+              <div className="md:hidden mb-8 text-left px-6">
+                <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
+              color: '#555555',
+              fontWeight: '100',
+              letterSpacing: '0'
+            }}>
+                  {title}
+                </h2>
+                {/* Subheadline below headline - hide for Zeichnungen */}
+                {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
+              color: '#555555'
+            }}>
+                    {description}
+                  </p>}
+              </div>
+            )}
           </>}
         
         {/* Fallback for when no header image */}
