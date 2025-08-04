@@ -1,5 +1,6 @@
 import { useState } from "react";
 import GalleryModal from "./GalleryModal";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface Artwork {
   id: string;
   src: string;
@@ -23,6 +24,7 @@ const GalleryGrid = ({
   selectedCategory,
   onCategoryChange
 }: GalleryGridProps) => {
+  const isMobile = useIsMobile();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const openModal = (index: number) => {
@@ -49,7 +51,7 @@ const GalleryGrid = ({
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
                 <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
-                  title === "ATELIER" ? "left-[5%]" : 
+                  title === "ATELIER" || title === "SKULPTUREN" ? "left-[5%]" : 
                   title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
                   "left-[55%]"
                 }`}>
@@ -78,22 +80,24 @@ const GalleryGrid = ({
               </div>
             </div>
             
-            {/* Mobile headlines below hero image */}
-            <div className="md:hidden mb-8 text-left px-6">
-              <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
-            color: '#555555',
-            fontWeight: '100',
-            letterSpacing: '0'
-          }}>
-                {title}
-              </h2>
-              {/* Subheadline below headline - hide for Zeichnungen */}
-              {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
-            color: '#555555'
-          }}>
-                  {description}
-                </p>}
-            </div>
+            {/* Mobile headlines below hero image - hide for "alle" category */}
+            {selectedCategory !== "alle" && (
+              <div className="md:hidden mb-8 text-left px-6">
+                <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
+              color: '#555555',
+              fontWeight: '100',
+              letterSpacing: '0'
+            }}>
+                  {title}
+                </h2>
+                {/* Subheadline below headline - hide for Zeichnungen */}
+                {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
+              color: '#555555'
+            }}>
+                    {description}
+                  </p>}
+              </div>
+            )}
           </>}
         
         {/* Fallback for when no header image */}
@@ -139,7 +143,7 @@ const GalleryGrid = ({
             <div className="aspect-square overflow-hidden rounded-sm bg-muted">
               <img src={artwork.src} alt={artwork.alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" style={artwork.category === "masken" ? {
             height: "200%",
-            objectPosition: "calc(50% - 10px) calc(50% - 90px)"
+            objectPosition: `calc(50% - 10px) calc(50% - ${isMobile ? '60px' : '110px'})`
           } : {}} loading="lazy" />
             </div>
           </div>)}
