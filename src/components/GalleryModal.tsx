@@ -67,8 +67,12 @@ const GalleryModal = ({
   // Extract filename from src and format it
   const getFormattedFilename = (src: string) => {
     const filename = src.split('/').pop() || '';
-    // Remove file extension and replace underscores with spaces
-    return filename.replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+    // Remove file extension
+    let formatted = filename.replace(/\.[^/.]+$/, '');
+    // Remove category prefixes (e.g., "Skulpturen-11-", "Zeichnung-01-", "Masken-05-", "Atelier-02-")
+    formatted = formatted.replace(/^(Skulpturen|Zeichnung|Masken|Atelier)-\d+-/, '');
+    // Replace underscores with spaces
+    return formatted.replace(/_/g, ' ');
   };
 
   return (
