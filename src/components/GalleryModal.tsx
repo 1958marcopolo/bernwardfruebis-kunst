@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface Artwork {
   id: string;
@@ -26,6 +27,7 @@ const GalleryModal = ({
   onNext, 
   onPrevious 
 }: GalleryModalProps) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -81,7 +83,7 @@ const GalleryModal = ({
       <button
         onClick={onClose}
         className="absolute top-6 right-6 z-10 p-2 text-white hover:text-gray-300 transition-colors"
-        aria-label="Close gallery"
+        aria-label={t.modal.closeGallery}
       >
         <X size={32} />
       </button>
@@ -91,7 +93,7 @@ const GalleryModal = ({
         onClick={onPrevious}
         className="absolute left-6 z-10 p-4 text-white hover:text-gray-300 transition-colors disabled:opacity-50"
         disabled={artworks.length <= 1}
-        aria-label="Previous image"
+        aria-label={t.modal.previousImage}
       >
         <ChevronLeft size={40} />
       </button>
@@ -101,14 +103,14 @@ const GalleryModal = ({
         onClick={onNext}
         className="absolute right-6 z-10 p-4 text-white hover:text-gray-300 transition-colors disabled:opacity-50"
         disabled={artworks.length <= 1}
-        aria-label="Next image"
+        aria-label={t.modal.nextImage}
       >
         <ChevronRight size={40} />
       </button>
 
       {/* Image counter */}
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-10 text-white text-sm font-medium">
-        {currentIndex + 1} of {artworks.length}
+        {currentIndex + 1} {t.modal.of} {artworks.length}
       </div>
 
       {/* Main image */}

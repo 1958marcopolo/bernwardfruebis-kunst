@@ -1,6 +1,9 @@
 import Navigation from "@/components/Navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -13,7 +16,7 @@ const About = () => {
               fontSize: '32px',
               letterSpacing: '0'
             }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
-              ZU MEINER PERSON
+              {t.about.title}
             </h1>
           </header>
 
@@ -30,35 +33,23 @@ const About = () => {
             {/* Biography Text */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Geboren wurde ich 1958 in Meckenheim in der Pfalz, meine 
-                Schulzeit verbrachte ich in St. Blasien im Schwarzwald.
+                {t.about.biography.paragraph1}
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Aus heutiger Sicht würde ich sagen, dass ich eher ein lausiger 
-                Schüler war, gerade in klassischen Fächern, wie Latein oder 
-                Mathe. Doch schon damals entdeckte Carlo Pickert, ein ziemlich 
-                verrückter Kunstlehrer aus der Schweiz, mein besonderes Auge 
-                für Farben und Formen.
+                {t.about.biography.paragraph2}
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Später studierte ich an der FH Mainz Visuelle Kommunikation 
-                bei Prof. Hans F. Krebs und Prof. Gedo Dötterweich. Zu meiner 
-                Ausbildung gehörten traditionelle Drucktechniken, wie 
-                Lithographie, Kaltnadelradierung, sowie freie Grafik und 
-                figurliches Zeichnen.
+                {t.about.biography.paragraph3}
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                In dieser Zeit experimentierte ich auch mit allerlei Spielarten 
-                von Monotypie.
+                {t.about.biography.paragraph4}
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Später habe ich meine Vorliebe zum Zeichnen entdeckt und spüre 
-                noch heute jedes mal den Aufbruch, der einem weißen Blatt Papier 
-                inne wohnt.
+                {t.about.biography.paragraph5}
               </p>
             </div>
           </div>
@@ -68,11 +59,11 @@ const About = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Bernward Frübis. Alle Rechte vorbehalten.
+            {t.footer.copyright}
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             <a href="/impressum" className="hover:text-foreground transition-colors">
-              IMPRESSUM
+              {t.footer.impressum}
             </a>
           </p>
         </div>

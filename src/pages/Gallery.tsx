@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import GalleryGrid from "@/components/GalleryGrid";
 import { getImageSrc } from "@/lib/imageRegistry";
+import { useTranslation } from "@/hooks/useTranslation";
 
 // Using local masken hero image from public folder
 const maskenHero = "/galerie_web_01.jpg";
@@ -9,6 +10,7 @@ const maskenHero = "/galerie_web_01.jpg";
 type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "atelier";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<Category>("masken");
 
   // Combined artwork data with categories - using image registry for proper bundling
@@ -145,38 +147,38 @@ const Gallery = () => {
     switch (category) {
       case "alle":
         return {
-          title: "\"CHIEN MECHANT\"",
-          description: "84 x 60 cm",
+          title: t.descriptions.alle.title,
+          description: t.descriptions.alle.description,
           headerImage: getImageSrc("zeichnung-22")
         };
       case "zeichnungen":
         return {
-          title: "ZEICHNUNGEN",
-          description: "Vielfältige künstlerische Ausdrucksformen in verschiedenen Medien und Techniken",
+          title: t.descriptions.zeichnungen.title,
+          description: t.descriptions.zeichnungen.description,
           headerImage: getImageSrc("zeichnungenHeader")
         };
       case "masken":
         return {
-          title: "MASKEN",
-          description: "Trotz ihrer starken Reduzierung ist vielen Masken ein menschlicher Wesenszug geblieben, der die Kommunikation mit dem überraschten Betrachter sucht.",
+          title: t.descriptions.masken.title,
+          description: t.descriptions.masken.description,
           headerImage: maskenHero
         };
       case "skulpturen":
         return {
-          title: "SKULPTUREN",
-          description: "Skulpturen springen hervor, treten in die dritte Dimension, erwecken ein Objekt erst richtig zum Leben. Dadurch ist der kreative Prozess ungleich komplexer, als bei jeder Zeichnung oder Malerei. Am Beginn steht ein amorphes Ausgangsmaterial wie Holz, Ton, Marmor oder sonstigen Materialien und letztlich entscheidet nur der pure Wille des Schöpfers in Verbindung mit seinen gestalterischen Fähigkeiten was am Ende daraus entsteht. - Einfach faszinierend.",
+          title: t.descriptions.skulpturen.title,
+          description: t.descriptions.skulpturen.description,
           headerImage: getImageSrc("skulpturenHero")
         };
       case "atelier":
         return {
-          title: "ATELIER",
-          description: "Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke",
+          title: t.descriptions.atelier.title,
+          description: t.descriptions.atelier.description,
           headerImage: "/Atelier-05-Sonnenmann_Schatten(Ton)_h20cm.jpg"
         };
       default:
         return {
-          title: "ALLE ARBEITEN",
-          description: "Eine Übersicht aller künstlerischen Arbeiten von Bernward Frübis",
+          title: t.descriptions.alle.title,
+          description: t.descriptions.alle.description,
           headerImage: "/placeholder.svg"
         };
     }
@@ -203,11 +205,11 @@ const Gallery = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Bernward Frübis. Alle Rechte vorbehalten.
+            {t.footer.copyright}
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             <a href="/impressum" className="hover:text-foreground transition-colors">
-              IMPRESSUM
+              {t.footer.impressum}
             </a>
           </p>
         </div>

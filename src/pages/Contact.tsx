@@ -1,6 +1,9 @@
 import Navigation from "@/components/Navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -13,7 +16,7 @@ const Contact = () => {
               fontSize: '32px',
               letterSpacing: '0'
             }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
-              KONTAKT
+              {t.contact.title}
             </h1>
           </header>
 
@@ -22,7 +25,7 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xl font-medium mb-4 text-foreground">
-                  Anschrift
+                  {t.contact.address}
                 </h2>
                 <div className="text-lg text-muted-foreground space-y-1">
                   <p className="font-medium text-foreground">Bernward Frübis</p>
@@ -33,11 +36,11 @@ const Contact = () => {
 
               <div>
                 <h2 className="text-xl font-medium mb-4 text-foreground">
-                  Kontaktdaten
+                  {t.contact.contactData}
                 </h2>
                 <div className="text-lg text-muted-foreground space-y-2">
                   <p>
-                    <span className="text-foreground font-medium">E-Mail:</span>{" "}
+                    <span className="text-foreground font-medium">{t.contact.email}:</span>{" "}
                     <a 
                       href="mailto:info@bernwardfruebis-kunst.de"
                       className="hover:text-foreground transition-colors"
@@ -46,7 +49,7 @@ const Contact = () => {
                     </a>
                   </p>
                   <p>
-                    <span className="text-foreground font-medium">Mobil:</span>{" "}
+                    <span className="text-foreground font-medium">{t.contact.mobile}:</span>{" "}
                     <a 
                       href="tel:+491737086839"
                       className="hover:text-foreground transition-colors"
@@ -62,25 +65,24 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xl font-medium mb-4 text-foreground">
-                  Anfragen
+                  {t.contact.inquiries}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Bei Interesse von Galeristen, privaten Kauf/Interessenten oder 
-                  sonstigen Anregungen können Sie mich gerne per Mail kontaktieren.
+                  {t.contact.inquiriesText}
                 </p>
               </div>
 
               <div className="p-6 bg-card border border-border rounded-sm">
                 <h3 className="text-lg font-medium mb-3 text-foreground">
-                  Verfügbare Services
+                  {t.contact.availableServices}
                 </h3>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• Töpferkurse</li>
-                  <li>• Zeichen- und Malkurse</li>
-                  <li>• Mappenberatung</li>
-                  <li>• Kunstberatung</li>
-                  <li>• Auftragsarbeiten</li>
-                  <li>• Galerienausstellungen</li>
+                  <li>• {t.contact.services.pottery}</li>
+                  <li>• {t.contact.services.drawing}</li>
+                  <li>• {t.contact.services.portfolio}</li>
+                  <li>• {t.contact.services.consulting}</li>
+                  <li>• {t.contact.services.commissions}</li>
+                  <li>• {t.contact.services.exhibitions}</li>
                 </ul>
               </div>
             </div>
@@ -91,11 +93,11 @@ const Contact = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Bernward Frübis. Alle Rechte vorbehalten.
+            {t.footer.copyright}
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             <a href="/impressum" className="hover:text-foreground transition-colors">
-              IMPRESSUM
+              {t.footer.impressum}
             </a>
           </p>
         </div>

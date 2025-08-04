@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GalleryModal from "./GalleryModal";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "@/hooks/useTranslation";
 interface Artwork {
   id: string;
   src: string;
@@ -16,14 +17,15 @@ interface GalleryGridProps {
   selectedCategory?: string;
   onCategoryChange?: (category: string) => void;
 }
-const GalleryGrid = ({
-  artworks,
-  title,
-  description,
-  headerImage,
-  selectedCategory,
-  onCategoryChange
+const GalleryGrid = ({ 
+  artworks, 
+  title, 
+  description, 
+  headerImage, 
+  selectedCategory, 
+  onCategoryChange 
 }: GalleryGridProps) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -115,24 +117,19 @@ const GalleryGrid = ({
       {selectedCategory && onCategoryChange && <div className="mb-12 border-t border-b border-border pt-6 pb-6">
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
-              {[{
-            key: "alle",
-            label: "ALLE"
-          }, {
-            key: "zeichnungen",
-            label: "ZEICHNUNGEN"
-          }, {
-            key: "masken",
-            label: "MASKEN"
-          }, {
-            key: "skulpturen",
-            label: "SKULPTUREN"
-          }, {
-            key: "atelier",
-            label: "ATELIER"
-          }].map(item => <button key={item.key} onClick={() => onCategoryChange(item.key)} className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${selectedCategory === item.key ? "text-foreground border-b-2 border-foreground" : "text-muted-foreground"}`}>
-                  {item.label}
-                </button>)}
+              {(["alle", "zeichnungen", "masken", "skulpturen", "atelier"] as const).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => onCategoryChange(category)}
+                  className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${
+                    selectedCategory === category
+                      ? "text-foreground border-b-2 border-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {t.categories[category]}
+                </button>
+              ))}
             </div>
           </div>
         </div>}

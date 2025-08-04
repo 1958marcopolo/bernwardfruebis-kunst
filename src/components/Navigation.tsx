@@ -1,12 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "@/hooks/useTranslation";
+import { Globe } from "lucide-react";
 
 const Navigation = () => {
+  const { language, toggleLanguage, t } = useTranslation();
   const location = useLocation();
 
   const navItems = [
     { path: "/", label: "GALERIE" },
-    { path: "/ueber-mich", label: "ÜBER MICH" },
-    { path: "/kontakt", label: "KONTAKT" },
+    { path: "/about", label: t.navigation.about },
+    { path: "/contact", label: t.navigation.contact },
   ];
 
   return (
@@ -18,7 +21,7 @@ const Navigation = () => {
             <span className="font-normal" style={{ color: '#fff' }}>KUNST</span>
           </Link>
           
-          <div className="flex items-center justify-center space-x-8 md:space-x-12">
+          <div className="flex items-center justify-center space-x-6 md:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -32,6 +35,16 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 text-sm font-medium tracking-wider text-muted-foreground hover:text-foreground transition-colors ml-4"
+              aria-label={`Switch to ${language === 'de' ? 'English' : 'German'}`}
+            >
+              <Globe size={16} />
+              {language.toUpperCase()}
+            </button>
           </div>
         </div>
       </div>
