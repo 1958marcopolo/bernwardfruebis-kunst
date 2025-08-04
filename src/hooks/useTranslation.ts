@@ -86,6 +86,26 @@ export interface Translations {
     previousImage: string;
     nextImage: string;
   };
+  
+  // Impressum page
+  impressum: {
+    title: string;
+    legalInfo: string;
+    contact: string;
+    responsibleContent: string;
+    contentLiability: string;
+    linkLiability: string;
+    copyright: string;
+    dataProtection: string;
+    contentLiabilityText1: string;
+    contentLiabilityText2: string;
+    linkLiabilityText1: string;
+    linkLiabilityText2: string;
+    copyrightText1: string;
+    copyrightText2: string;
+    dataProtectionText1: string;
+    dataProtectionText2: string;
+  };
 }
 
 const germanTranslations: Translations = {
@@ -161,6 +181,24 @@ const germanTranslations: Translations = {
     previousImage: 'Vorheriges Bild',
     nextImage: 'Nächstes Bild',
   },
+  impressum: {
+    title: 'IMPRESSUM',
+    legalInfo: 'Angaben gemäß § 5 TMG',
+    contact: 'Kontakt',
+    responsibleContent: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
+    contentLiability: 'Haftung für Inhalte',
+    linkLiability: 'Haftung für Links',
+    copyright: 'Urheberrecht',
+    dataProtection: 'Datenschutz',
+    contentLiabilityText1: 'Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.',
+    contentLiabilityText2: 'Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
+    linkLiabilityText1: 'Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.',
+    linkLiabilityText2: 'Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.',
+    copyrightText1: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.',
+    copyrightText2: 'Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.',
+    dataProtectionText1: 'Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.',
+    dataProtectionText2: 'Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.',
+  },
 };
 
 const englishTranslations: Translations = {
@@ -235,6 +273,24 @@ const englishTranslations: Translations = {
     closeGallery: 'Close gallery',
     previousImage: 'Previous image',
     nextImage: 'Next image',
+  },
+  impressum: {
+    title: 'IMPRINT',
+    legalInfo: 'Legal Information according to § 5 TMG',
+    contact: 'Contact',
+    responsibleContent: 'Responsible for content according to § 55 Abs. 2 RStV',
+    contentLiability: 'Liability for Content',
+    linkLiability: 'Liability for Links',
+    copyright: 'Copyright',
+    dataProtection: 'Data Protection',
+    contentLiabilityText1: 'As a service provider, we are responsible for our own content on these pages in accordance with § 7 para. 1 TMG and general laws. However, according to §§ 8 to 10 TMG, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.',
+    contentLiabilityText2: 'Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific legal violation. Upon becoming aware of such legal violations, we will remove this content immediately.',
+    linkLiabilityText1: 'Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.',
+    linkLiabilityText2: 'However, permanent monitoring of the content of linked pages is not reasonable without concrete evidence of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately.',
+    copyrightText1: 'The content and works created by the site operators on these pages are subject to German copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use.',
+    copyrightText2: 'Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.',
+    dataProtectionText1: 'The use of our website is generally possible without providing personal data. Insofar as personal data (e.g. name, address or email addresses) is collected on our pages, this is always done on a voluntary basis whenever possible. This data will not be passed on to third parties without your express consent.',
+    dataProtectionText2: 'We point out that data transmission on the Internet (e.g. when communicating by email) can have security gaps. Complete protection of data against access by third parties is not possible.',
   },
 };
 

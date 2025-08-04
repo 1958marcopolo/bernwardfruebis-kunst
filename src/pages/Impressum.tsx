@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Impressum = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -13,13 +15,13 @@ const Impressum = () => {
               fontSize: '32px',
               letterSpacing: '0'
             }} className="tracking-wide font-sans mb-4 text-foreground text-2xl">
-              IMPRESSUM
+              {t.impressum.title}
             </h1>
           </header>
 
           <div className="space-y-8 text-foreground">
             <section>
-              <h2 className="text-xl font-medium mb-4">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.legalInfo}</h2>
               <div className="space-y-2">
                 <p>Bernward Frübis</p>
                 <p>Künstler</p>
@@ -29,7 +31,7 @@ const Impressum = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Kontakt</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.contact}</h2>
               <div className="space-y-2">
                 <p>Mobil: 0173 70 86 839</p>
                 <p>E-Mail: info@bernwardfruebis-kunst.de</p>
@@ -37,7 +39,7 @@ const Impressum = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.responsibleContent}</h2>
               <div className="space-y-2">
                 <p>Bernward Frübis</p>
                 <p>Rheinvillenstr. 10</p>
@@ -46,65 +48,42 @@ const Impressum = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Haftung für Inhalte</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.contentLiability}</h2>
               <p className="text-sm leading-relaxed">
-                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den 
-                allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht 
-                unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach 
-                Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                {t.impressum.contentLiabilityText1}
               </p>
               <p className="text-sm leading-relaxed mt-3">
-                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
-                Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt 
-                der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden 
-                Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                {t.impressum.contentLiabilityText2}
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Haftung für Links</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.linkLiability}</h2>
               <p className="text-sm leading-relaxed">
-                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-                Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der 
-                verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die 
-                verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. 
-                Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+                {t.impressum.linkLiabilityText1}
               </p>
               <p className="text-sm leading-relaxed mt-3">
-                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte 
-                einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige 
-                Links umgehend entfernen.
+                {t.impressum.linkLiabilityText2}
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Urheberrecht</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.copyright}</h2>
               <p className="text-sm leading-relaxed">
-                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen 
-                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der 
-                Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
-                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                {t.impressum.copyrightText1}
               </p>
               <p className="text-sm leading-relaxed mt-3">
-                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte 
-                Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem 
-                auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei 
-                Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                {t.impressum.copyrightText2}
               </p>
             </section>
 
             <section>
-              <h2 className="text-xl font-medium mb-4">Datenschutz</h2>
+              <h2 className="text-xl font-medium mb-4">{t.impressum.dataProtection}</h2>
               <p className="text-sm leading-relaxed">
-                Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf 
-                unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben 
-                werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre 
-                ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+                {t.impressum.dataProtectionText1}
               </p>
               <p className="text-sm leading-relaxed mt-3">
-                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) 
-                Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist 
-                nicht möglich.
+                {t.impressum.dataProtectionText2}
               </p>
             </section>
           </div>
@@ -114,7 +93,7 @@ const Impressum = () => {
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Bernward Frübis. Alle Rechte vorbehalten.
+            {t.footer.copyright}
           </p>
         </div>
       </footer>
