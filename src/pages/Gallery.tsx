@@ -9,7 +9,7 @@ const maskenHero = "/galerie_web_01.jpg";
 type Category = "alle" | "zeichnungen" | "masken" | "skulpturen" | "atelier";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("alle");
+  const [selectedCategory, setSelectedCategory] = useState<Category>("masken");
 
   // Combined artwork data with categories - using image registry for proper bundling
   const allArtworks = [
