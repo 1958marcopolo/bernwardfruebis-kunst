@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 
 export interface Translations {
   // Navigation
@@ -238,11 +238,10 @@ const englishTranslations: Translations = {
   },
 };
 
-// Detect user language based on browser language and location
+// Detect user language based on browser language
 const detectUserLanguage = (): 'de' | 'en' => {
   const browserLang = navigator.language.toLowerCase();
   
-  // Check if browser language is German or from German-speaking countries
   if (browserLang.startsWith('de') || 
       browserLang === 'de-de' || 
       browserLang === 'de-at' || 
@@ -250,18 +249,33 @@ const detectUserLanguage = (): 'de' | 'en' => {
     return 'de';
   }
   
-  return 'en'; // Default to English for all other languages
+  return 'en';
 };
 
-export const useTranslation = () => {
+// Create context
+interface TranslationContextType {
+  language: 'de' | 'en';
+  setLanguage: (lang: 'de' | 'en') => void;
+  toggleLanguage: () => void;
+  t: Translations;
+}
+
+const TranslationContext = createContext<TranslationContextType | undefined>(undefined);
+
+// Provider component
+export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<'de' | 'en'>(() => {
-    // Check localStorage first, then detect language
-    const savedLang = localStorage.getItem('language') as 'de' | 'en' | null;
-    return savedLang || detectUserLanguage();
+    if (typeof window !== 'undefined') {
+      const savedLang = localStorage.getItem('language') as 'de' | 'en' | null;
+      return savedLang || detectUserLanguage();
+    }
+    return 'de';
   });
 
   useEffect(() => {
-    localStorage.setItem('language', language);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', language);
+    }
   }, [language]);
 
   const translations = language === 'de' ? germanTranslations : englishTranslations;
@@ -270,10 +284,23 @@ export const useTranslation = () => {
     setLanguage(prev => prev === 'de' ? 'en' : 'de');
   };
 
-  return {
-    language,
-    setLanguage,
-    toggleLanguage,
-    t: translations,
-  };
+  return (
+    <TranslationContext.Provider value={{
+      language,
+      setLanguage,
+      toggleLanguage,
+      t: translations,
+    }}>
+      {children}
+    </TranslationContext.Provider>
+  );
+};
+
+// Hook to use translation
+export const useTranslation = () => {
+  const context = useContext(TranslationContext);
+  if (context === undefined) {
+    throw new Error('useTranslation must be used within a TranslationProvider');
+  }
+  return context;
 };
