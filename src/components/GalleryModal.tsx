@@ -63,6 +63,13 @@ const GalleryModal = ({
   if (!isOpen || artworks.length === 0) return null;
 
   const currentArtwork = artworks[currentIndex];
+  
+  // Extract filename from src and format it
+  const getFormattedFilename = (src: string) => {
+    const filename = src.split('/').pop() || '';
+    // Remove file extension and replace underscores with spaces
+    return filename.replace(/\.[^/.]+$/, '').replace(/_/g, ' ');
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center">
@@ -101,7 +108,7 @@ const GalleryModal = ({
       </div>
 
       {/* Main image */}
-      <div className={`relative w-full h-full flex items-center justify-center ${isMobile ? 'px-4 py-16' : 'px-20 py-20'}`}>
+      <div className={`relative w-full h-full flex flex-col items-center justify-center ${isMobile ? 'px-4 py-16' : 'px-20 py-20'}`}>
         <img
           src={currentArtwork.src}
           alt={currentArtwork.alt}
@@ -109,9 +116,16 @@ const GalleryModal = ({
           loading="lazy"
         />
         
+        {/* Filename below image */}
+        <div className="mt-4 text-white text-center">
+          <p className="text-sm font-medium opacity-80">
+            {getFormattedFilename(currentArtwork.src)}
+          </p>
+        </div>
+        
         {/* Title if available */}
         {currentArtwork.title && (
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50 text-white text-center">
+          <div className="mt-2 text-white text-center">
             <h3 className="text-lg font-medium">{currentArtwork.title}</h3>
           </div>
         )}
