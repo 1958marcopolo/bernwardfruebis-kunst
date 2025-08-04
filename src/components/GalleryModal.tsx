@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Artwork {
   id: string;
@@ -25,6 +26,7 @@ const GalleryModal = ({
   onNext, 
   onPrevious 
 }: GalleryModalProps) => {
+  const isMobile = useIsMobile();
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -99,7 +101,7 @@ const GalleryModal = ({
       </div>
 
       {/* Main image */}
-      <div className="relative w-full h-full flex items-center justify-center px-20 py-20">
+      <div className={`relative w-full h-full flex items-center justify-center ${isMobile ? 'px-16 py-16' : 'px-20 py-20'}`}>
         <img
           src={currentArtwork.src}
           alt={currentArtwork.alt}
