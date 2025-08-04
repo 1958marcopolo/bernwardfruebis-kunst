@@ -54,7 +54,8 @@ const GalleryGrid = ({
                 {/* Headline and subheadline positioning based on category */}
                 <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
                   title === "ATELIER" || title === "SKULPTUREN" ? "left-[5%]" : 
-                  title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
+                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "right-0 text-right pl-0 pr-16" : 
+                  title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right pl-0 pr-16" :
                   "left-[55%]"
                 }`}>
                   <h2 style={{
@@ -63,7 +64,7 @@ const GalleryGrid = ({
                 fontSize: '32px',
                 letterSpacing: '0'
               }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "text-right" : "text-left"
+                title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
               }`}>
                     {title}
                   </h2>

@@ -56,7 +56,7 @@ const About = () => {
         </div>
       </main>
 
-      <footer className="border-t border-border bg-background py-8">
+      <footer className="bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
             {t.footer.copyright}
