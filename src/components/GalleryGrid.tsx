@@ -1,5 +1,6 @@
 import { useState } from "react";
 import GalleryModal from "./GalleryModal";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface Artwork {
   id: string;
   src: string;
@@ -23,6 +24,7 @@ const GalleryGrid = ({
   selectedCategory,
   onCategoryChange
 }: GalleryGridProps) => {
+  const isMobile = useIsMobile();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const openModal = (index: number) => {
@@ -141,7 +143,7 @@ const GalleryGrid = ({
             <div className="aspect-square overflow-hidden rounded-sm bg-muted">
               <img src={artwork.src} alt={artwork.alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" style={artwork.category === "masken" ? {
             height: "200%",
-            objectPosition: "calc(50% - 10px) calc(50% - 110px)"
+            objectPosition: `calc(50% - 10px) calc(50% - ${isMobile ? '50px' : '110px'})`
           } : {}} loading="lazy" />
             </div>
           </div>)}
