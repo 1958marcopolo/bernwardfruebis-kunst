@@ -202,6 +202,27 @@ const Gallery = () => {
         />
       </main>
 
+      {/* Filter Navigation - Duplicate above footer */}
+      <div className="mb-12 border-t border-b border-border pt-6 pb-6">
+        <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-12">
+            {(["alle", "zeichnungen", "masken", "skulpturen", "atelier"] as const).map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category as Category)}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-foreground ${
+                  selectedCategory === category
+                    ? "text-foreground border-b-2 border-foreground"
+                    : "text-muted-foreground"
+                }`}
+              >
+                {t.categories[category]}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <footer className="border-t border-border bg-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-muted-foreground">
