@@ -102,7 +102,7 @@ const germanTranslations: Translations = {
   },
   descriptions: {
     alle: {
-      title: '"CHIEN MECHANT"',
+      title: '"CHIEN MÉCHANT"',
       description: '84 x 60 cm',
     },
     zeichnungen: {
@@ -177,7 +177,7 @@ const englishTranslations: Translations = {
   },
   descriptions: {
     alle: {
-      title: '"CHIEN MECHANT"',
+      title: '"CHIEN MÉCHANT"',
       description: '84 x 60 cm',
     },
     zeichnungen: {

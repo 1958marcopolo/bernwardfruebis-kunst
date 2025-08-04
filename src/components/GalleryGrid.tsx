@@ -58,22 +58,22 @@ const GalleryGrid = ({
                   "left-[55%]"
                 }`}>
                   <h2 style={{
-                color: title === "ZEICHNUNGEN" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
+                color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
                 fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
               }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                title === "ZEICHNUNGEN" ? "text-right" : "text-left"
+                title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "text-right" : "text-left"
               }`}>
                     {title}
                   </h2>
-                  {/* Subheadline below headline - hide for Zeichnungen */}
-                  {title !== "ZEICHNUNGEN" && title !== "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
+                  {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
+                  {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && title !== "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed" style={{
                 color: '#deddd6'
               }}>
                       {description}
                     </p>}
-                  {title === "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
+                  {title === "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed" style={{
                 color: '#555555'
               }}>
                       {description}
@@ -92,8 +92,8 @@ const GalleryGrid = ({
             }}>
                   {title}
                 </h2>
-                {/* Subheadline below headline - hide for Zeichnungen */}
-                {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
+                {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
+                {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
               color: '#555555'
             }}>
                     {description}
