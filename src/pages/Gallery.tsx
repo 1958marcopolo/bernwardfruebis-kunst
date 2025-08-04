@@ -125,6 +125,7 @@ const Gallery = () => {
     { id: "skulptur-08", src: getImageSrc("skulptur-08"), alt: "Stier (Ton) h15cm", category: "skulpturen" as Category },
     { id: "skulptur-09", src: getImageSrc("skulptur-09"), alt: "Kultischer Stier (Ton) h15cm", category: "skulpturen" as Category },
     { id: "skulptur-10", src: getImageSrc("skulptur-10"), alt: "Zorniges Pferd (Ton) h20cm", category: "skulpturen" as Category },
+    { id: "skulptur-11", src: getImageSrc("skulptur-11"), alt: "Venus von Willendorf (Ton) h20cm", category: "skulpturen" as Category },
 
     // Atelier
     { id: "atelier-01", src: getImageSrc("atelier-01"), alt: "Ziege (Ton) h10cm", category: "atelier" as Category },

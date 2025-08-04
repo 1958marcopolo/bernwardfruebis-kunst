@@ -114,6 +114,7 @@ export const imageRegistry = {
   "skulptur-08": { src: "/Skulpturen-08-Stier_(Ton)_h15cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-09": { src: "/Skulpturen-09-Kultischer_Stier_(Ton)_h15cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-10": { src: "/Skulpturen-10-Zorniges_Pferd_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
+  "skulptur-11": { src: "/Skulpturen-11-Venus-von-Willendorf_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
 
   // Atelier - updated to match actual public filenames
   "atelier-01": { src: "/Atelier-01-Ziege_(Ton)_h10cm.jpg", fallback: "/placeholder.svg" },
