@@ -62,7 +62,8 @@ const GalleryGrid = ({
                 color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
                 fontWeight: '100',
                 fontSize: '32px',
-                letterSpacing: '0'
+                letterSpacing: '0',
+                whiteSpace: title === "\"CHIEN MÉCHANT\"" ? 'nowrap' : 'normal'
               }} className={`tracking-wide font-sans mb-4 text-2xl ${
                 title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
               }`}>
