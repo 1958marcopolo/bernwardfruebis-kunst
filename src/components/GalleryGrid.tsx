@@ -48,27 +48,27 @@ const GalleryGrid = ({
         {headerImage && <>
             {/* Hero Image */}
             <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
-              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[45%_center]" : "object-center"}`} />
+              <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" || title === "MASKS" ? "object-center md:object-[45%_center]" : "object-center"}`} />
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
                 <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
-                  title === "ATELIER" || title === "SKULPTUREN" ? "left-[5%]" : 
-                  title === "ZEICHNUNGEN" ? "right-0 text-right pl-0 pr-16" : 
+                  title === "ATELIER" || title === "STUDIO" || title === "SKULPTUREN" || title === "SCULPTURES" ? "left-[5%]" : 
+                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "right-0 text-right pl-0 pr-16" : 
                   "left-[55%]"
                 }`}>
                   <h2 style={{
-                color: title === "ZEICHNUNGEN" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
+                color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MECHANT\"" ? '#555555' : '#deddd6',
                 fontWeight: '100',
                 fontSize: '32px',
                 letterSpacing: '0'
               }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                title === "ZEICHNUNGEN" ? "text-right" : "text-left"
+                title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "text-right" : "text-left"
               }`}>
                     {title}
                   </h2>
                   {/* Subheadline below headline - hide for Zeichnungen */}
-                  {title !== "ZEICHNUNGEN" && title !== "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
+                  {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && title !== "\"CHIEN MECHANT\"" && <p className="text-base leading-relaxed" style={{
                 color: '#deddd6'
               }}>
                       {description}
@@ -93,7 +93,7 @@ const GalleryGrid = ({
                   {title}
                 </h2>
                 {/* Subheadline below headline - hide for Zeichnungen */}
-                {title !== "ZEICHNUNGEN" && <p className="text-sm leading-relaxed" style={{
+                {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
               color: '#555555'
             }}>
                     {description}
