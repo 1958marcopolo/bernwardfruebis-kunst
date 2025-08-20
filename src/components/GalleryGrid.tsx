@@ -52,11 +52,11 @@ const GalleryGrid = ({
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
-                <div className={`absolute top-16 w-[40%] pl-16 mr-5 ${
-                  title === "ATELIER" || title === "SKULPTUREN" ? "left-[5%]" : 
-                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "left-[5%]" : 
-                  title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right pl-0 pr-16" :
-                  "left-[55%]"
+                <div className={`absolute top-16 w-full px-16 ${
+                  title === "ATELIER" || title === "SKULPTUREN" ? "left-0" : 
+                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "left-0" : 
+                  title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right" :
+                  "left-0"
                 }`}>
                   <h2 style={{
                 color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
@@ -104,12 +104,18 @@ const GalleryGrid = ({
             }}>
                   {title}
                 </h2>
-                {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
-                {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
+                {/* Subheadline below headline - hide for Chien Méchant */}
+                {title !== "\"CHIEN MÉCHANT\"" && title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
               color: '#555555'
             }}>
                     {description}
                   </p>}
+                {/* Zeichnungen description for mobile */}
+                {(title === "ZEICHNUNGEN" || title === "DRAWINGS") && <div className="text-sm leading-relaxed" style={{
+              color: '#555555'
+            }}>
+                    <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
+                  </div>}
               </div>
             )}
           </>}
