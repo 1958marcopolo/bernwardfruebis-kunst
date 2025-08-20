@@ -52,7 +52,7 @@ const GalleryGrid = ({
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
-                <div className={`absolute top-16 w-full px-16 ${
+                <div className={`absolute bottom-16 w-full px-16 ${
                   title === "ATELIER" || title === "SKULPTUREN" ? "left-0" : 
                   title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "left-0" : 
                   title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right" :
