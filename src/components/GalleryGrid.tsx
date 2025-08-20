@@ -52,7 +52,9 @@ const GalleryGrid = ({
               {/* Text overlay - only visible on desktop */}
               <div className="absolute inset-0 hidden md:block">
                 {/* Headline and subheadline positioning based on category */}
-                <div className={`absolute bottom-8 w-full px-16 ${
+                <div className={`absolute ${
+                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "bottom-8 px-8" : "top-16 px-16"
+                } w-full ${
                   title === "ATELIER" || title === "SKULPTUREN" ? "left-0" : 
                   title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "left-0" : 
                   title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right" :
@@ -79,7 +81,7 @@ const GalleryGrid = ({
                   {(title === "ZEICHNUNGEN" || title === "DRAWINGS") && <div className="text-sm leading-relaxed" style={{
                 color: '#555555'
               }}>
-                      <div className="grid grid-cols-2 gap-8">
+                      <div className="grid grid-cols-2 gap-6">
                         <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen</p>
                         <p>um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
                       </div>
