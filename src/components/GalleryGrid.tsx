@@ -51,47 +51,44 @@ const GalleryGrid = ({
               <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[45%_center]" : "object-center"}`} />
               {/* H2 overlay - only visible on desktop/tablet */}
               <div className="absolute inset-0 hidden md:block">
-                {/* Headline positioning based on category */}
-                <div className={`absolute ${
-                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "bottom-8 px-8" : "top-16 px-16"
-                } w-full ${
-                  title === "ATELIER" || title === "SKULPTUREN" ? "left-0" : 
-                  title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "left-0" : 
-                  title === "\"CHIEN MÉCHANT\"" ? "right-0 text-right" :
-                  "left-0"
-                }`}>
+                {/* Headline positioning - all at bottom left */}
+                <div className="absolute bottom-8 left-0 px-8 w-full">
                   <h2 style={{
-                    color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
+                    color: '#555555',
                     fontWeight: '100',
                     fontSize: '32px',
                     letterSpacing: '0',
                     whiteSpace: title === "\"CHIEN MÉCHANT\"" ? 'nowrap' : 'normal'
-                  }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                    title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
-                  }`}>
+                  }} className="tracking-wide font-sans mb-2 text-2xl text-left">
                     {title}
                   </h2>
+                  {/* Paragraph inside hero - only for "alle" category */}
+                  {selectedCategory === "alle" && (
+                    <p className="text-base leading-relaxed text-left" style={{ color: '#555555' }}>
+                      {description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
             
-            {/* Paragraph below hero image - desktop/tablet */}
-            <div className="hidden md:block max-w-4xl mx-auto mb-8 px-8">
-              {(title === "ZEICHNUNGEN" || title === "DRAWINGS") ? (
-                <div className="text-sm leading-relaxed" style={{ color: '#555555' }}>
-                  <div className="grid grid-cols-2 gap-6">
-                    <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen</p>
-                    <p>um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
+            {/* Paragraph below hero image - desktop/tablet, not for "alle" category */}
+            {selectedCategory !== "alle" && (
+              <div className="hidden md:block max-w-4xl mx-auto mb-8 px-8">
+                {(title === "ZEICHNUNGEN" || title === "DRAWINGS") ? (
+                  <div className="text-sm leading-relaxed" style={{ color: '#555555' }}>
+                    <div className="grid grid-cols-2 gap-6">
+                      <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen</p>
+                      <p>um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <p className={`text-base leading-relaxed ${
-                  title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
-                }`} style={{ color: '#555555' }}>
-                  {description}
-                </p>
-              )}
-            </div>
+                ) : (
+                  <p className="text-base leading-relaxed text-left" style={{ color: '#555555' }}>
+                    {description}
+                  </p>
+                )}
+              </div>
+            )}
             
             {/* Mobile headlines below hero image - hide for "alle" category */}
             {selectedCategory !== "alle" && (
