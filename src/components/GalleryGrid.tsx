@@ -49,9 +49,9 @@ const GalleryGrid = ({
             {/* Hero Image */}
             <div className="relative mb-6 aspect-[16/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
               <img src={headerImage} alt={`${title} header`} className={`w-full h-full object-cover ${title === "MASKEN" ? "object-center md:object-[45%_center]" : "object-center"}`} />
-              {/* Text overlay - only visible on desktop */}
+              {/* H2 overlay - only visible on desktop/tablet */}
               <div className="absolute inset-0 hidden md:block">
-                {/* Headline and subheadline positioning based on category */}
+                {/* Headline positioning based on category */}
                 <div className={`absolute ${
                   title === "ZEICHNUNGEN" || title === "DRAWINGS" ? "bottom-8 px-8" : "top-16 px-16"
                 } w-full ${
@@ -61,57 +61,54 @@ const GalleryGrid = ({
                   "left-0"
                 }`}>
                   <h2 style={{
-                color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
-                fontWeight: '100',
-                fontSize: '32px',
-                letterSpacing: '0',
-                whiteSpace: title === "\"CHIEN MÉCHANT\"" ? 'nowrap' : 'normal'
-              }} className={`tracking-wide font-sans mb-4 text-2xl ${
-                title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
-              }`}>
+                    color: title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? '#555555' : '#deddd6',
+                    fontWeight: '100',
+                    fontSize: '32px',
+                    letterSpacing: '0',
+                    whiteSpace: title === "\"CHIEN MÉCHANT\"" ? 'nowrap' : 'normal'
+                  }} className={`tracking-wide font-sans mb-4 text-2xl ${
+                    title === "ZEICHNUNGEN" || title === "DRAWINGS" || title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
+                  }`}>
                     {title}
                   </h2>
-                  {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
-                  {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && title !== "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed" style={{
-                color: '#deddd6'
-              }}>
-                      {description}
-                    </p>}
-                  {title === "\"CHIEN MÉCHANT\"" && <p className="text-base leading-relaxed text-right" style={{
-                color: '#555555',
-                whiteSpace: 'nowrap'
-              }}>
-                      {description}
-                    </p>}
-                  {/* Two-column text layout for Zeichnungen/Drawings */}
-                  {(title === "ZEICHNUNGEN" || title === "DRAWINGS") && 
-                    <div className="text-sm leading-relaxed" style={{ color: '#555555' }}>
-                      <div className="grid grid-cols-2 gap-6">
-                        <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen</p>
-                        <p>um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
-                      </div>
-                    </div>
-                  }
                 </div>
               </div>
+            </div>
+            
+            {/* Paragraph below hero image - desktop/tablet */}
+            <div className="hidden md:block max-w-4xl mx-auto mb-8 px-8">
+              {(title === "ZEICHNUNGEN" || title === "DRAWINGS") ? (
+                <div className="text-sm leading-relaxed" style={{ color: '#555555' }}>
+                  <div className="grid grid-cols-2 gap-6">
+                    <p>Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen</p>
+                    <p>um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.</p>
+                  </div>
+                </div>
+              ) : (
+                <p className={`text-base leading-relaxed ${
+                  title === "\"CHIEN MÉCHANT\"" ? "text-right" : "text-left"
+                }`} style={{ color: '#555555' }}>
+                  {description}
+                </p>
+              )}
             </div>
             
             {/* Mobile headlines below hero image - hide for "alle" category */}
             {selectedCategory !== "alle" && (
               <div className="md:hidden mb-8 text-left px-6">
                 <h2 className="text-2xl tracking-wide font-sans mb-4" style={{
-              color: '#555555',
-              fontWeight: '100',
-              letterSpacing: '0'
-            }}>
+                  color: '#555555',
+                  fontWeight: '100',
+                  letterSpacing: '0'
+                }}>
                   {title}
                 </h2>
                 {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
                 {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
-              color: '#555555'
-            }}>
-                    {description}
-                  </p>}
+                  color: '#555555'
+                }}>
+                  {description}
+                </p>}
               </div>
             )}
           </>}
