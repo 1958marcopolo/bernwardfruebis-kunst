@@ -139,7 +139,7 @@ const germanTranslations: Translations = {
     },
     atelier: {
       title: 'ATELIER',
-      description: 'Einblicke in den kreativen Prozess und die Entstehung der Kunstwerke',
+      description: 'Einblicke in den kreativen Prozess und\ndie Entstehung der Kunstwerke',
     },
   },
   footer: {
@@ -232,7 +232,7 @@ const englishTranslations: Translations = {
     },
     atelier: {
       title: 'STUDIO',
-      description: 'Insights into the creative process and the creation of artworks',
+      description: 'Insights into the creative process and\nthe creation of artworks',
     },
   },
   footer: {
