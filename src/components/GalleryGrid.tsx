@@ -64,7 +64,7 @@ const GalleryGrid = ({
                   </h2>
                   {/* Paragraph inside hero - for "alle" category and "atelier/studio" */}
                   {(selectedCategory === "alle" || title === "ATELIER" || title === "STUDIO") && (
-                    <p className="text-base leading-relaxed text-left" style={{ 
+                    <p className="text-base leading-relaxed text-left whitespace-pre-line" style={{ 
                       color: (title === "MASKEN" || title === "MASKS" || title === "SKULPTUREN" || title === "SCULPTURES") ? '#deddd6' : '#555555' 
                     }}>
                       {description}

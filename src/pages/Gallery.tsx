@@ -58,6 +58,9 @@ const Gallery = () => {
     { id: "zeichnung-40", src: getImageSrc("zeichnung-40"), alt: "Beaucet IV (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-41", src: getImageSrc("zeichnung-41"), alt: "Venasque (Graphit) DIN A4", category: "zeichnungen" as Category },
     { id: "zeichnung-42", src: getImageSrc("zeichnung-42"), alt: "Beaucet VI (Graphit) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-43", src: getImageSrc("zeichnung-43"), alt: "Apfel (Buntstift) 42x42cm", category: "zeichnungen" as Category },
+    { id: "zeichnung-44", src: getImageSrc("zeichnung-44"), alt: "Blatt (Buntstift) DIN A4", category: "zeichnungen" as Category },
+    { id: "zeichnung-45", src: getImageSrc("zeichnung-45"), alt: "Herbst Blatt (Buntstift) DIN A4", category: "zeichnungen" as Category },
     
     // Masken
     { id: "masken-01", src: getImageSrc("masken-01"), alt: "BF Masken 01", category: "masken" as Category },
@@ -128,6 +131,8 @@ const Gallery = () => {
     { id: "skulptur-09", src: getImageSrc("skulptur-09"), alt: "Kultischer Stier (Ton) h15cm", category: "skulpturen" as Category },
     { id: "skulptur-10", src: getImageSrc("skulptur-10"), alt: "Zorniges Pferd (Ton) h20cm", category: "skulpturen" as Category },
     { id: "skulptur-11", src: getImageSrc("skulptur-11"), alt: "Venus von Willendorf (Ton) h20cm", category: "skulpturen" as Category },
+    { id: "skulptur-12", src: getImageSrc("skulptur-12"), alt: "Sator-Maske I (Ton Kupfer Leder) 15x40cm", category: "skulpturen" as Category },
+    { id: "skulptur-13", src: getImageSrc("skulptur-13"), alt: "Schlafende Skulptur (Ton) 15x20cm", category: "skulpturen" as Category },
 
     // Atelier
     { id: "atelier-01", src: getImageSrc("atelier-01"), alt: "Ziege (Ton) h10cm", category: "atelier" as Category },
