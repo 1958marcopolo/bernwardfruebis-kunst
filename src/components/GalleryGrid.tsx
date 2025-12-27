@@ -54,7 +54,7 @@ const GalleryGrid = ({
                 {/* Headline positioning - all at bottom left */}
                 <div className="absolute bottom-8 left-0 px-8 w-full">
                   <h2 style={{
-                    color: '#555555',
+                    color: (title === "MASKEN" || title === "MASKS" || title === "SKULPTUREN" || title === "SCULPTURES") ? '#deddd6' : '#555555',
                     fontWeight: '100',
                     fontSize: '32px',
                     letterSpacing: '0',
@@ -62,9 +62,11 @@ const GalleryGrid = ({
                   }} className="tracking-wide font-sans mb-2 text-2xl text-left">
                     {title}
                   </h2>
-                  {/* Paragraph inside hero - only for "alle" category */}
-                  {selectedCategory === "alle" && (
-                    <p className="text-base leading-relaxed text-left" style={{ color: '#555555' }}>
+                  {/* Paragraph inside hero - for "alle" category and "atelier/studio" */}
+                  {(selectedCategory === "alle" || title === "ATELIER" || title === "STUDIO") && (
+                    <p className="text-base leading-relaxed text-left" style={{ 
+                      color: (title === "MASKEN" || title === "MASKS" || title === "SKULPTUREN" || title === "SCULPTURES") ? '#deddd6' : '#555555' 
+                    }}>
                       {description}
                     </p>
                   )}
@@ -72,8 +74,8 @@ const GalleryGrid = ({
               </div>
             </div>
             
-            {/* Paragraph below hero image - desktop/tablet, not for "alle" category */}
-            {selectedCategory !== "alle" && (
+            {/* Paragraph below hero image - desktop/tablet, not for "alle" category or atelier */}
+            {selectedCategory !== "alle" && title !== "ATELIER" && title !== "STUDIO" && (
               <div className="hidden md:block max-w-4xl mx-auto mb-8 px-8">
                 {(title === "ZEICHNUNGEN" || title === "DRAWINGS") ? (
                   <div className="text-sm leading-relaxed" style={{ color: '#555555' }}>
