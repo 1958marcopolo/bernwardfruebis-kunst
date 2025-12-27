@@ -45,6 +45,9 @@ export const imageRegistry = {
   "zeichnung-40": { src: "/Zeichnung-40-Beaucet_IV_(Graphit)_DIN_A4.jpg", fallback: "/placeholder.svg" },
   "zeichnung-41": { src: "/Zeichnung-41-Venasque_(Graphit)_DIN_A4.jpg", fallback: "/placeholder.svg" },
   "zeichnung-42": { src: "/Zeichnung-42-Beaucet_VI_(Graphit)_DIN_A4.jpg", fallback: "/placeholder.svg" },
+  "zeichnung-43": { src: "/Zeichnung-43-Apfel_(Buntstift)_42x42cm.jpg", fallback: "/placeholder.svg" },
+  "zeichnung-44": { src: "/Zeichnung-44-Blatt_(Buntstift)_DIN_A4.jpg", fallback: "/placeholder.svg" },
+  "zeichnung-45": { src: "/Zeichnung-45-Herbst_Blatt_(Buntstift)_DIN_A4.jpg", fallback: "/placeholder.svg" },
 
   // Masken
   "masken-01": { src: "/Masken-01-bernwardfruebis.jpg", fallback: "/placeholder.svg" },
@@ -115,6 +118,8 @@ export const imageRegistry = {
   "skulptur-09": { src: "/Skulpturen-09-Kultischer_Stier_(Ton)_h15cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-10": { src: "/Skulpturen-10-Zorniges_Pferd_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-11": { src: "/Skulpturen-11-Venus-von-Willendorf_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
+  "skulptur-12": { src: "/Skulpturen-12-Sator-Maske_I_(Ton_Kupfer_Leder)_15x40cm.jpg", fallback: "/placeholder.svg" },
+  "skulptur-13": { src: "/Skulpturen-13-Schlafende Skulptur_(Ton)_15x20cm.jpg", fallback: "/placeholder.svg" },
 
   // Atelier - updated to match actual public filenames
   "atelier-01": { src: "/Atelier-01-Ziege_(Ton)_h10cm.jpg", fallback: "/placeholder.svg" },
