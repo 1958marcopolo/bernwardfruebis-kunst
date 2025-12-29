@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { useTranslation } from "@/hooks/useTranslation";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -86,6 +88,13 @@ const Contact = () => {
                 </ul>
               </div>
             </div>
+          </div>
+
+          {/* Gallery Button */}
+          <div className="mt-12 text-center">
+            <Button asChild className="px-12 py-6 text-lg font-medium">
+              <Link to="/">Zur Galerie</Link>
+            </Button>
           </div>
         </div>
       </main>
