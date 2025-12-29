@@ -58,8 +58,8 @@ const About = () => {
 
           {/* Gallery Button */}
           <div className="mt-12 text-center">
-            <Button asChild variant="outline" className="px-8">
-              <Link to="/gallery">Zur Galerie</Link>
+            <Button asChild className="px-12 py-6 text-lg font-medium">
+              <Link to="/">Zur Galerie</Link>
             </Button>
           </div>
         </div>
