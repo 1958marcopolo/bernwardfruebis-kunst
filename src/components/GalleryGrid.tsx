@@ -103,11 +103,17 @@ const GalleryGrid = ({
                   {title}
                 </h2>
                 {/* Subheadline below headline */}
-                <p className="text-sm leading-relaxed" style={{
-                  color: '#555555'
-                }}>
-                  {description}
-                </p>
+                {(title === "ZEICHNUNGEN" || title === "DRAWINGS") ? (
+                  <p className="text-sm leading-relaxed" style={{ color: '#555555' }}>
+                    Was beim Modellieren ein Klumpen Ton, ist bei einer Zeichnung unweigerlich das weiße Blatt Papier. Es fordert Mut voraus und zwingt den Zeichner seine anfängliche Zaghaftigkeit abzulegen um sich sogleich an der Darstellung der Realität zu messen. Das kann mitunter zu einer gewissen Ernüchterung führen. Mir hat es bis heute den ehrlichen Respekt vor jeder guten Zeichnung bewahrt.
+                  </p>
+                ) : (
+                  <p className="text-sm leading-relaxed" style={{
+                    color: '#555555'
+                  }}>
+                    {description}
+                  </p>
+                )}
               </div>
             )}
           </>}
