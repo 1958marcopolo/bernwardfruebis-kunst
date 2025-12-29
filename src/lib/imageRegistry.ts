@@ -127,6 +127,7 @@ export const imageRegistry = {
   "atelier-03": { src: "/Atelier-03-Ziege_Gebrannt_(Ton)_h10cm.jpg", fallback: "/placeholder.svg" },
   "atelier-04": { src: "/Atelier-04-Lama_(Ton)_h15cm.jpg", fallback: "/placeholder.svg" },
   "atelier-05": { src: "/Atelier-05-Sonnenmann_Schatten(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
+  "atelier-06": { src: "/Atelier-06-Schlafende_Skulptur_(Ton)_15x20cm.jpg", fallback: "/placeholder.svg" },
 
   // Header images
   "zeichnungenHeader": { src: "/Zeichnung-31-Bleistift_366_(Graphit)_DIN_A4.jpg", fallback: "/placeholder.svg" },
