@@ -102,12 +102,12 @@ const GalleryGrid = ({
                 }}>
                   {title}
                 </h2>
-                {/* Subheadline below headline - hide for Zeichnungen/Drawings */}
-                {title !== "ZEICHNUNGEN" && title !== "DRAWINGS" && <p className="text-sm leading-relaxed" style={{
+                {/* Subheadline below headline */}
+                <p className="text-sm leading-relaxed" style={{
                   color: '#555555'
                 }}>
                   {description}
-                </p>}
+                </p>
               </div>
             )}
           </>}
