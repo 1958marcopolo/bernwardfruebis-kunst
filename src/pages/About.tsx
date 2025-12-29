@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { useTranslation } from "@/hooks/useTranslation";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const { t } = useTranslation();
@@ -52,6 +54,13 @@ const About = () => {
                 {t.about.biography.paragraph5}
               </p>
             </div>
+          </div>
+
+          {/* Gallery Button */}
+          <div className="mt-12 text-center">
+            <Button asChild variant="outline" className="px-8">
+              <Link to="/gallery">Zur Galerie</Link>
+            </Button>
           </div>
         </div>
       </main>
