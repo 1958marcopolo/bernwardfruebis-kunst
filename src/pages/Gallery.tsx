@@ -140,6 +140,7 @@ const Gallery = () => {
     { id: "atelier-03", src: getImageSrc("atelier-03"), alt: "Ziege Gebrannt (Ton) h10cm", category: "atelier" as Category },
     { id: "atelier-04", src: getImageSrc("atelier-04"), alt: "Lama (Ton) h15cm", category: "atelier" as Category },
     { id: "atelier-05", src: getImageSrc("atelier-05"), alt: "Sonnenmann Schatten (Ton) h20cm", category: "atelier" as Category },
+    { id: "atelier-06", src: getImageSrc("atelier-06"), alt: "Schlafende Skulptur (Ton) 15x20cm", category: "atelier" as Category },
   ];
 
   // Filter artworks based on selected category
