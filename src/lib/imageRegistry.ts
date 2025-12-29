@@ -119,7 +119,7 @@ export const imageRegistry = {
   "skulptur-10": { src: "/Skulpturen-10-Zorniges_Pferd_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-11": { src: "/Skulpturen-11-Venus-von-Willendorf_(Ton)_h20cm.jpg", fallback: "/placeholder.svg" },
   "skulptur-12": { src: "/Skulpturen-12-Sator-Maske_I_(Ton_Kupfer_Leder)_15x40cm.jpg", fallback: "/placeholder.svg" },
-  "skulptur-13": { src: "/Skulpturen-13-Schlafende%20Skulptur_(Ton)_15x20cm.jpg", fallback: "/placeholder.svg" },
+  "skulptur-13": { src: "/Skulpturen-13-Schlafende_Skulptur_(Ton)_15x20cm.jpg", fallback: "/placeholder.svg" },
 
   // Atelier - updated to match actual public filenames
   "atelier-01": { src: "/Atelier-01-Ziege_(Ton)_h10cm.jpg", fallback: "/placeholder.svg" },
